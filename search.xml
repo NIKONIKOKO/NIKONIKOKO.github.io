@@ -30,7 +30,8 @@
   <entry>
     <title>苍穹外卖第一天</title>
     <url>/2026/03/05/%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96%E7%AC%AC%E4%B8%80%E5%A4%A9/</url>
-    <content><![CDATA[<p>一、搭建数据库</p>
+    <content><![CDATA[<p>此处不讨论前端开发，只针对后端开发</p>
+<p>一、搭建数据库</p>
 <p>1、安装mysql</p>
 <p>2、使用navicat连接mysql</p>
 <p>3、运行预先准备好的sql文件（其中是建表语句编写的脚本）</p>
