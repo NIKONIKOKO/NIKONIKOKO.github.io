@@ -35,6 +35,8 @@
 <p>1、安装mysql</p>
 <p>2、使用navicat连接mysql</p>
 <p>3、运行预先准备好的sql文件（其中是建表语句编写的脚本）</p>
+<p>二、前后端联调</p>
+<p>注意要启动nginx</p>
 ]]></content>
   </entry>
 </search>
