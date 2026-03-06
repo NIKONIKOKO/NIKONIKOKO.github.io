@@ -36,7 +36,7 @@
 <p>2、使用navicat连接mysql</p>
 <p>3、运行预先准备好的sql文件（其中是建表语句编写的脚本）</p>
 <p>二、前后端联调</p>
-<p>在<code>F:\download\sky-take-out-master\sky-take-out-master\sky-take-out\sky-server\src\main\java\com\sky</code><br>下运行<code>SkyApplication.java</code></p>
+<p>在<code>F:\download\sky-take-out-master\sky-take-out-master\sky-take-out\sky-server\src\main\java\com\sky</code><br>下编译后运行<code>SkyApplication.java</code></p>
 <blockquote>
 <p>我在具体实施过程中遇到了以下问题</p>
 <blockquote>
