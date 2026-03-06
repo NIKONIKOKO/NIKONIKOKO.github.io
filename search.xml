@@ -36,7 +36,13 @@
 <p>2、使用navicat连接mysql</p>
 <p>3、运行预先准备好的sql文件（其中是建表语句编写的脚本）</p>
 <p>二、前后端联调</p>
-<p>注意要启动nginx</p>
+<p>在<code>F:\download\sky-take-out-master\sky-take-out-master\sky-take-out\sky-server\src\main\java\com\sky</code><br>下运行<code>SkyApplication.java</code></p>
+<blockquote>
+<p>我在具体实施过程中遇到了以下问题</p>
+<blockquote>
+<p>1、nginx服务器未启动导致前端页面打不开<br>2、我设置的数据库的root密码与<code>F:\download\sky-take-out-master\sky-take-out-master\sky-take-out\sky-server\src\main\resources\application-dev.yml</code>文件里的密码不一致，导致后端启动不了。需将文件里的密码改为我自己的root密码，并加双引号将其识别为string类型<br>3、上述2中文件里的host为苍穹外卖项目中前置配置的虚拟机的ip地址，由于我配置在本地windows中，需将其改为localhost<br>4、navicat中查看employee表的账户密码分别为admin和123456，但实际需要将密码改为123456经过MD5加密后的值，这样在前端输入123456时自动加密后才能经过比对成功比对上后端数据库中的加密值，否则前端输入的密码经加密后与后端的123456匹配不上<br>5、MySQL服务若没有打开则java程序访问不到MySQL数据库</p>
+</blockquote>
+</blockquote>
 ]]></content>
   </entry>
 </search>
