@@ -54,4 +54,11 @@
 </blockquote>
 ]]></content>
   </entry>
+  <entry>
+    <title>java基础第一天</title>
+    <url>/2026/03/06/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E4%B8%80%E5%A4%A9/</url>
+    <content><![CDATA[<h1 id="一、idea使用"><a href="#一、idea使用" class="headerlink" title="一、idea使用"></a>一、idea使用</h1><h2 id="1、java工程结构"><a href="#1、java工程结构" class="headerlink" title="1、java工程结构"></a>1、java工程结构</h2><p>项目-模块-包-类</p>
+<p>新建项目-新建模块-src里面新建包-</p>
+]]></content>
+  </entry>
 </search>
