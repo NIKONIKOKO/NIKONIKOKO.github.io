@@ -105,4 +105,11 @@
 <p>输入：<br>1、先导包<code>java.util.Scanner</code><br>2、创建一个Scanner扫描器对象<code>Scanner sc = new Scanner（System.in）;</code><br>3、使用扫描器对象的next（）方法或nextInt（）方法等，让程序等待用户输入整数或字符串等，直到碰到回车，输入完成，再赋值给一个变量<br>4、利用这个暂存变量输出</p>
 ]]></content>
   </entry>
+  <entry>
+    <title>java基础第二天</title>
+    <url>/2026/03/07/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E4%BA%8C%E5%A4%A9/</url>
+    <content><![CDATA[<h1 id="一、运算符"><a href="#一、运算符" class="headerlink" title="一、运算符"></a>一、运算符</h1><h2 id="“-”符号在java中的特殊用途"><a href="#“-”符号在java中的特殊用途" class="headerlink" title="“+”符号在java中的特殊用途"></a>“+”符号在java中的特殊用途</h2><p>“+”符号与字符串运算的时候用作连接符的，其结果依然是一个字符串</p>
+<p>“+”号运算时从左往右算，能计算则计算，计算不了才连接。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int a = 5;</span><br><span class="line">System.out.println(&quot;hello&quot; + a + &#x27;a&#x27;);</span><br><span class="line">//结果为hello5a</span><br><span class="line">System.out.println(a + &#x27;a&#x27; + &quot;hello&quot;);</span><br><span class="line">//结果为102hello</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
 </search>
