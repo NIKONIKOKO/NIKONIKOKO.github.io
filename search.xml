@@ -128,4 +128,25 @@
 
 <h1 id="七、找素数"><a href="#七、找素数" class="headerlink" title="七、找素数"></a>七、找素数</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package find_prime_num;</span><br><span class="line"></span><br><span class="line">//输出101~200素数</span><br><span class="line">public class find_prime_num &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        boolean isprime = true;</span><br><span class="line">        int count = 0;</span><br><span class="line">        for(int i = 101;i &lt;= 200;++i)&#123;</span><br><span class="line">            isprime = true;</span><br><span class="line">            for(int j = 2;j &lt;= Math.sqrt(i);++j)&#123;</span><br><span class="line">                if(i % j == 0)&#123;</span><br><span class="line">                    isprime = false;</span><br><span class="line">                    break;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            if(isprime)&#123;</span><br><span class="line">                ++count;</span><br><span class="line">                System.out.print(i + &quot; &quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">        System.out.println(&quot;101~200中素数总共个数：&quot; + count);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
+  <entry>
+    <title>java基础第三天</title>
+    <url>/2026/03/08/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E4%B8%89%E5%A4%A9/</url>
+    <content><![CDATA[<h1 id="一、数组"><a href="#一、数组" class="headerlink" title="一、数组"></a>一、数组</h1><p>数组静态初始化：</p>
+<blockquote>
+<p>一维数组：</p>
+<blockquote>
+<p><code>类型[] 数组名 = new 类型[]&#123;元素&#125;;</code><br><code>类型[] 数组名 = &#123;元素&#125;;</code><br>二维数组：<br><code>类型[][] 数组名 = new 类型[][]&#123;&#123;元素&#125;，&#123;元素&#125;&#125;;</code><br><code>类型[][] 数组名 = &#123;&#123;元素&#125;，&#123;元素&#125;&#125;;</code></p>
+</blockquote>
+</blockquote>
+<p>数组动态初始化：</p>
+<blockquote>
+<p>一维数组：</p>
+<blockquote>
+<p><code>类型[] 数组名 = new 类型[数组元素个数];</code><br>二维数组：<br><code>类型[] 数组名 = new 类型[数组元素个数][数组元素个数];</code></p>
+</blockquote>
+</blockquote>
+<p>此时数组里面是默认值0、0.0、false、null</p>
+<p>数组遍历：<br>使用下标遍历，并且可以使用<code>数组名.length</code></p>
+]]></content>
+  </entry>
 </search>
