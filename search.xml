@@ -223,7 +223,7 @@
 <h3 id="5-3、注意事项"><a href="#5-3、注意事项" class="headerlink" title="5.3、注意事项"></a>5.3、注意事项</h3><blockquote>
 <p><code>super（）</code>和<code>this（）</code>都必须写在构造器的第一行，并且两者不能同时出现</p>
 </blockquote>
-]]></content>
+<h1 id="二、多态"><a href="#二、多态" class="headerlink" title="二、多态"></a>二、多态</h1>]]></content>
       <categories>
         <category>java_base</category>
       </categories>
