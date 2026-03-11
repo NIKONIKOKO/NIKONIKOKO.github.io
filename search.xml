@@ -223,7 +223,27 @@
 <h3 id="5-3、注意事项"><a href="#5-3、注意事项" class="headerlink" title="5.3、注意事项"></a>5.3、注意事项</h3><blockquote>
 <p><code>super（）</code>和<code>this（）</code>都必须写在构造器的第一行，并且两者不能同时出现</p>
 </blockquote>
-<h1 id="二、多态"><a href="#二、多态" class="headerlink" title="二、多态"></a>二、多态</h1>]]></content>
+<h1 id="二、多态"><a href="#二、多态" class="headerlink" title="二、多态"></a>二、多态</h1><h2 id="1、什么是多态"><a href="#1、什么是多态" class="headerlink" title="1、什么是多态"></a>1、什么是多态</h2><p>多态是在继承&#x2F;实现情况下的一种现象，表现为：对象多态、行为多态（而变量没有多态）</p>
+<p>多态前提：有继承&#x2F;实现关系，存在父类引用子类对象，存在方法重写</p>
+<p>在父类对象引用子类对象时，并没有截断父类对象中没有的子类对象成员，只是父类对象不能访问</p>
+<blockquote>
+<p>假设有<code>父类 父类对象名 = new 多态子类构造器</code></p>
+<blockquote>
+<p>那么当使用父类对象名调用方法时，父类若没定义方法，报错，不管子类是否定义都访问不到；父类若定义了，优先访问子类的方法<br>而使用父类对象名调用变量时，父类若没定义变量，报错，子类定义与否都访问不到；父类若写了，访问父类<br>总结：{对于方法：编译看左边，运行看右边}{对于变量：编译看左边，运行也看左边}</p>
+</blockquote>
+</blockquote>
+<h2 id="2、多态下的类型转换问题"><a href="#2、多态下的类型转换问题" class="headerlink" title="2、多态下的类型转换问题"></a>2、多态下的类型转换问题</h2><p>自动类型转换：<code>父类 变量名 = new 子类（）；</code><br>强制类型转换：<code>子类 变量名 = （子类）父类变量；</code>（前提是这个父类变量引用的是这个子类对象，其真实类型为子类对象）</p>
+<p>强制类型转换好处：可以解决多态下不能调用子类独有功能的问题（前提是真实类型为子类或子类的后代）</p>
+<h3 id="2-1、强制类型转换的一个注意事项"><a href="#2-1、强制类型转换的一个注意事项" class="headerlink" title="2.1、强制类型转换的一个注意事项"></a>2.1、强制类型转换的一个注意事项</h3><p>假如父类为People，其子类为Teacher和Student，如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">People P = new Teacher（）；</span><br><span class="line">Student s = （Student） p；</span><br></pre></td></tr></table></figure>
+
+<p>存在继承&#x2F;实现关系就可以在编译阶段进行强制类型转换，编译阶段不会报错（即父类对象，表面上可以强转子类）</p>
+<p>运行时，如果发现对象的真实类型与强转后的类型不同，就会报类型转换异常（ClassCastException）的错误出来（如上p的真实类型其实为子类Teacher，不是Student及其子类，不能强转Student）</p>
+<p>强转前，建议使用instanceof关键字，判断当前对象的真实类型，再进行强转（<code>对象 instanceof 目标类型</code>判断对象是否是目标类型或目标类型的子类）</p>
+<blockquote>
+<p>总结：子转父默认（看不到子类独有成员），父转子真实类型必须为子类或其后代</p>
+</blockquote>
+]]></content>
       <categories>
         <category>java_base</category>
       </categories>
