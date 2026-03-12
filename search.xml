@@ -301,6 +301,63 @@
   <entry>
     <title>java基础第五天</title>
     <url>/2026/03/12/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E4%BA%94%E5%A4%A9/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h1 id="一、面向对象高级"><a href="#一、面向对象高级" class="headerlink" title="一、面向对象高级"></a>一、面向对象高级</h1><h2 id="1、final关键字"><a href="#1、final关键字" class="headerlink" title="1、final关键字"></a>1、final关键字</h2><p>final关键字可以修饰：类、方法、变量</p>
+<p>修饰类：该类被称为最终类，特点是不能被继承了（final后跟class）</p>
+<p>修饰方法：该方法被称为最终方法，特点是不能被重写了（final后跟返回类型）</p>
+<p>修饰变量：该变量有且仅能被赋值一次（final后跟变量类型）</p>
+<h3 id="1-1、常量"><a href="#1-1、常量" class="headerlink" title="1.1、常量"></a>1.1、常量</h3><p>使用了static final修饰的成员变量就被称为常量</p>
+<p>作用：常用于记录系统的配置信息</p>
+<p>命名规范：建议全部使用大写，多个单词使用下划线连接起来</p>
+<p>使用常量记录系统配置信息优势：代码可读性好，可维护性好，并且程序编译后，常量会被“宏替换”替换成字面量，可以保证使用常量和直接使用字面量性能一样</p>
+<h3 id="1-2、final注意事项"><a href="#1-2、final注意事项" class="headerlink" title="1.2、final注意事项"></a>1.2、final注意事项</h3><p>final修饰基本类型的变量，变量存储的数据不能被改变</p>
+<p>final修饰引用类型的变量，变量存储的地址不能被改变，但地址所指向对象的内容是可以被改变的</p>
+<h2 id="2、设计模式"><a href="#2、设计模式" class="headerlink" title="2、设计模式"></a>2、设计模式</h2><p>设计模式：一个问题通常有n种解法，其中肯定有一种解法是最优的，这个最优的解法被人总结出来了，称为设计模式</p>
+<p>设计模式有20多种，对应20多种软件开发中会遇到的问题</p>
+<p>学习设计模式：明白能解决什么问题、知道怎么写</p>
+<h3 id="2-1、单例设计模式"><a href="#2-1、单例设计模式" class="headerlink" title="2.1、单例设计模式"></a>2.1、单例设计模式</h3><p>作用：确保某个类只能创建一个对象</p>
+<p>写法：</p>
+<blockquote>
+<p>饿汉式单例（拿对象时，对象早就创建好了）</p>
+<blockquote>
+<p>类的构造器私有（确保单例类对外不能创建更多对象，单例才有可能性）<br>定义一个静态类变量记住类的一个对象（定义时引用一个已经创建好的对象）<br>定义一个静态类方法，返回对象（不是静态方法依赖对象存在，而我们需要通过类调用方法）<br>懒汉式单例（拿对象时，才开始创建对象）<br>类的构造器私有<br>定义一个静态类变量用于存储对象（定义时不创建对象指向null）<br>提供一个静态类方法，返回对象（通过类名直接调用静态方法，静态对象已经创建过就返回同一个静态对象，没有创建就先创建再返回）</p>
+</blockquote>
+</blockquote>
+<h2 id="3、枚举类"><a href="#3、枚举类" class="headerlink" title="3、枚举类"></a>3、枚举类</h2><p>枚举是一种特殊类</p>
+<p>枚举类写法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">修饰符 enum 枚举类名&#123;</span><br><span class="line">    名称1，名称2，...;</span><br><span class="line">    其他成员...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-1、特点"><a href="#3-1、特点" class="headerlink" title="3.1、特点"></a>3.1、特点</h3><blockquote>
+<p>枚举都是最终类，不可以被继承，枚举类都是继承java.lang.Enum类的<br>枚举类中的第一行，只能写枚举类的对象名称，且要用逗号隔开。这些名称，本质是常量，每个常量都是类型为此枚举类的一个实例对象<br>枚举类的构造器都是私有的（写不写都是私有），因此枚举类对外不能创建对象</p>
+</blockquote>
+<h3 id="3-2、注意事项"><a href="#3-2、注意事项" class="headerlink" title="3.2、注意事项"></a>3.2、注意事项</h3><p>switch的case后面不能使用<code>枚举类名.枚举变量名</code>，应该直接使用枚举变量名，不然报错</p>
+<h2 id="4、抽象类"><a href="#4、抽象类" class="headerlink" title="4、抽象类"></a>4、抽象类</h2><p>abstract关键字可以修饰类（abstract后跟class）、成员方法（abstract后跟返回类型），分别称为抽象类、抽象方法</p>
+<h3 id="4-1、特点以及注意事项"><a href="#4-1、特点以及注意事项" class="headerlink" title="4.1、特点以及注意事项"></a>4.1、特点以及注意事项</h3><blockquote>
+<p>抽象类最主要特点：抽象类不能创建对象，仅作为一种特殊的父类，让子类继承并实现（不能创建对象但可以引用子类对象）<br>抽象类中不一定要有抽象方法，有抽象方法的类必须是抽象类<br>类有的成员（成员变量、方法、构造器）抽象类都可以有<br>抽象类里面如果写抽象方法，只能写方法的声明而不能写具体的方法体（普通方法可以写方法体）<br>一个类继承抽象类，必须重写完抽象类的全部抽象方法，否则这个类也必须定义成抽象类</p>
+</blockquote>
+<h3 id="4-2、模板方法设计模式"><a href="#4-2、模板方法设计模式" class="headerlink" title="4.2、模板方法设计模式"></a>4.2、模板方法设计模式</h3><p>作用：</p>
+<blockquote>
+<p>提供一个方法作为完成某类功能的模板，模板方法封装了每个实现步骤，但允许子类提供特定步骤的实现<br>提高代码的复用、并简化子类设计</p>
+</blockquote>
+<p>写法：</p>
+<blockquote>
+<p>1、定义一个抽象类<br>2、在里面定义2个方法</p>
+<blockquote>
+<p>一个是模板方法：把共同的实现步骤放里面去（建议给模板方法加final关键字，防止被子类重写后滥用）<br>一个是抽象方法：不确定的实现步骤，交给具体的子类来完成</p>
+</blockquote>
+</blockquote>
+<h2 id="5、接口"><a href="#5、接口" class="headerlink" title="5、接口"></a>5、接口</h2><h3 id="5-1、接口概述"><a href="#5-1、接口概述" class="headerlink" title="5.1、接口概述"></a>5.1、接口概述</h3><p>接口关键字：interface</p>
+<p>结构：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">修饰符 interface 接口名&#123;</span><br><span class="line">    // JDK8之前称为传统接口，接口内只能定义常量（可以省略public static final不写，默认为常量）、抽象方法（同常量可以省略，默认抽象方法）</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-2、接口特点"><a href="#5-2、接口特点" class="headerlink" title="5.2、接口特点"></a>5.2、接口特点</h3><p>接口不能创建对象，但可以引用实现类对象</p>
+<h3 id="5-3、接口作用"><a href="#5-3、接口作用" class="headerlink" title="5.3、接口作用"></a>5.3、接口作用</h3><p>接口是用来被类实现（implements）的，实现接口的类称为实现类，一个类可以同时实现多个接口</p>
+<p>如：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">修饰符 class 实现类类名 implements 接口1，接口2，接口3，...&#123;</span><br><span class="line">    // 实现类实现多个接口，必须重写完全部接口的全部抽象方法，否则实现类需要定义成抽象类</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>好处：<br>弥补了类单继承的不足，一个类能同时实现多个接口，角色更多，功能更强<br>让程序可以面向接口编程，可以灵活方便的切换各种业务实现（更利于程序解耦合）</p>
+]]></content>
+      <categories>
+        <category>java_base</category>
+      </categories>
   </entry>
 </search>
