@@ -349,12 +349,19 @@
 <p>结构：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">修饰符 interface 接口名&#123;</span><br><span class="line">    // JDK8之前称为传统接口，接口内只能定义常量（可以省略public static final不写，默认为常量）、抽象方法（同常量可以省略，默认抽象方法）</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="5-2、接口特点"><a href="#5-2、接口特点" class="headerlink" title="5.2、接口特点"></a>5.2、接口特点</h3><p>接口不能创建对象，但可以引用实现类对象</p>
+<h3 id="5-2、接口特点"><a href="#5-2、接口特点" class="headerlink" title="5.2、接口特点"></a>5.2、接口特点</h3><p>接口不能创建对象，但可以引用实现类对象，然后调用实现类重写的接口里面定义的方法（接口里没定义的不能调用）</p>
 <h3 id="5-3、接口作用"><a href="#5-3、接口作用" class="headerlink" title="5.3、接口作用"></a>5.3、接口作用</h3><p>接口是用来被类实现（implements）的，实现接口的类称为实现类，一个类可以同时实现多个接口</p>
 <p>如：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">修饰符 class 实现类类名 implements 接口1，接口2，接口3，...&#123;</span><br><span class="line">    // 实现类实现多个接口，必须重写完全部接口的全部抽象方法，否则实现类需要定义成抽象类</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>好处：<br>弥补了类单继承的不足，一个类能同时实现多个接口，角色更多，功能更强<br>让程序可以面向接口编程，可以灵活方便的切换各种业务实现（更利于程序解耦合）</p>
+<h3 id="5-4、JDK8之后接口新增三种方法"><a href="#5-4、JDK8之后接口新增三种方法" class="headerlink" title="5.4、JDK8之后接口新增三种方法"></a>5.4、JDK8之后接口新增三种方法</h3><h4 id="5-4-1、默认方法"><a href="#5-4-1、默认方法" class="headerlink" title="5.4.1、默认方法"></a>5.4.1、默认方法</h4><p>默认方法（普通实例方法），必须加default，默认使用public修饰</p>
+<p>注意：只能使用接口的实现类对象调用</p>
+<h4 id="5-4-2、私有方法"><a href="#5-4-2、私有方法" class="headerlink" title="5.4.2、私有方法"></a>5.4.2、私有方法</h4><p>JDK9之后新增的</p>
+<p>私有的实例方法，使用private修饰，可以不加default</p>
+<p>使用接口中其他实例方法调用</p>
+<h4 id="5-4-3、静态方法"><a href="#5-4-3、静态方法" class="headerlink" title="5.4.3、静态方法"></a>5.4.3、静态方法</h4><p>默认public修饰</p>
+<p>只能使用当前接口名来调用</p>
 ]]></content>
       <categories>
         <category>java_base</category>
