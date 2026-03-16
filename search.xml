@@ -28,7 +28,7 @@
 ]]></content>
   </entry>
   <entry>
-    <title>苍穹外卖第一天</title>
+    <title>苍穹外卖第一部分</title>
     <url>/2026/03/05/%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86/</url>
     <content><![CDATA[<p>此处不讨论前端开发，只针对后端开发</p>
 <p>一、搭建数据库</p>
@@ -46,7 +46,7 @@
 ]]></content>
   </entry>
   <entry>
-    <title>java基础第一天</title>
+    <title>java基础第一部分</title>
     <url>/2026/03/06/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86/</url>
     <content><![CDATA[<h1 id="一、idea使用"><a href="#一、idea使用" class="headerlink" title="一、idea使用"></a>一、idea使用</h1><h2 id="1、java工程结构"><a href="#1、java工程结构" class="headerlink" title="1、java工程结构"></a>1、java工程结构</h2><p>项目-模块-包-类</p>
 <p>新建项目-新建模块-src里面新建包-包里面新建类</p>
@@ -102,7 +102,7 @@
       </categories>
   </entry>
   <entry>
-    <title>java基础第二天</title>
+    <title>java基础第二部分</title>
     <url>/2026/03/07/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86/</url>
     <content><![CDATA[<h1 id="一、运算符"><a href="#一、运算符" class="headerlink" title="一、运算符"></a>一、运算符</h1><h2 id="1、“-”符号在java中的特殊用途"><a href="#1、“-”符号在java中的特殊用途" class="headerlink" title="1、“+”符号在java中的特殊用途"></a>1、“+”符号在java中的特殊用途</h2><p>“+”符号与字符串运算的时候用作连接符的，其结果依然是一个字符串</p>
 <p>“+”号运算时从左往右算，能计算则计算，计算不了才连接。例如：</p>
@@ -128,7 +128,7 @@
       </categories>
   </entry>
   <entry>
-    <title>java基础第四天</title>
+    <title>java基础第四部分</title>
     <url>/2026/03/10/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86/</url>
     <content><![CDATA[<h1 id="一、继承"><a href="#一、继承" class="headerlink" title="一、继承"></a>一、继承</h1><h2 id="1、什么是继承"><a href="#1、什么是继承" class="headerlink" title="1、什么是继承"></a>1、什么是继承</h2><p>extends关键字可以让一个类和另一个类建立起父子关系</p>
 <p>子类写法：<code>public class B extends A{}</code>其中A类称为父类（基类或超类），B类称为子类（派生类）</p>
@@ -226,7 +226,7 @@
       </categories>
   </entry>
   <entry>
-    <title>java基础第三天</title>
+    <title>java基础第三部分</title>
     <url>/2026/03/08/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86/</url>
     <content><![CDATA[<h1 id="一、数组"><a href="#一、数组" class="headerlink" title="一、数组"></a>一、数组</h1><p>数组静态初始化：</p>
 <blockquote>
@@ -291,7 +291,7 @@
       </categories>
   </entry>
   <entry>
-    <title>javaweb第一天</title>
+    <title>javaweb第一部分</title>
     <url>/2026/03/06/javaweb%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86/</url>
     <content><![CDATA[<h1 id="一、web前端开发初识"><a href="#一、web前端开发初识" class="headerlink" title="一、web前端开发初识"></a>一、web前端开发初识</h1><h2 id="1、web标准"><a href="#1、web标准" class="headerlink" title="1、web标准"></a>1、web标准</h2><p>三个组成部分：</p>
 <blockquote>
@@ -300,7 +300,7 @@
 ]]></content>
   </entry>
   <entry>
-    <title>java基础第六天</title>
+    <title>java基础第六部分</title>
     <url>/2026/03/14/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E5%85%AD%E9%83%A8%E5%88%86/</url>
     <content><![CDATA[<h1 id="一、面向对象高级"><a href="#一、面向对象高级" class="headerlink" title="一、面向对象高级"></a>一、面向对象高级</h1><h2 id="1、代码块"><a href="#1、代码块" class="headerlink" title="1、代码块"></a>1、代码块</h2><p>代码块是类的5大成分之一（成员变量、构造器、方法、代码块、内部类）</p>
 <p>代码块分为两种：</p>
@@ -370,7 +370,7 @@
       </categories>
   </entry>
   <entry>
-    <title>java基础第五天</title>
+    <title>java基础第五部分</title>
     <url>/2026/03/12/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E4%BA%94%E9%83%A8%E5%88%86/</url>
     <content><![CDATA[<h1 id="一、面向对象高级"><a href="#一、面向对象高级" class="headerlink" title="一、面向对象高级"></a>一、面向对象高级</h1><h2 id="1、final关键字"><a href="#1、final关键字" class="headerlink" title="1、final关键字"></a>1、final关键字</h2><p>final关键字可以修饰：类、方法、变量</p>
 <p>修饰类：该类被称为最终类，特点是不能被继承了（final后跟class）</p>
