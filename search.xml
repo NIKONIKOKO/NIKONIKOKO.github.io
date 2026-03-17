@@ -364,6 +364,45 @@
 <blockquote>
 <p>求字符串长度：public int length()<br>获取索引处字符：public char charAt(int index)<br>获取字符串的字符数组：public char[] toCharArray()<br>判别字符串是否内容相同：public boolean equals(Object anObject)<br>判别字符串是否内容相同（忽略大小写）：public boolean equalsIgnoreCase(String anotherString)<br>截取字符串（包前不包后）：public String substring(int beginIndex,int endIndex)<br>截取字符串（从索引位置到末尾）：public String substring(int beginIndex)<br>替换字符串旧值：public String replace(CharSequence target,CharSequence replacement)<br>判断是否包含某个字符串：public boolean contains(CharSequence s)<br>判断是否以某个字符串开头：public boolean startsWith(String prefix)<br>按某个字符串分割字符串：public String[] split(String regex)</p>
 </blockquote>
+<h3 id="4-2、ArrayList"><a href="#4-2、ArrayList" class="headerlink" title="4.2、ArrayList"></a>4.2、ArrayList</h3><p>创建ArrayList对象：</p>
+<blockquote>
+<p>调用无参构造器public ArrayList()</p>
+<blockquote>
+<p>ArrayList&lt;指定类型&gt; 对象名 &#x3D; new ArrayList&lt;&gt;();</p>
+</blockquote>
+</blockquote>
+<p>常用方法（其中E为泛型，如果在创建ArrayList对象时定了类型，就只能存那个类型，没定义就都可以存，实际中建议固定类型）：</p>
+<blockquote>
+<p>指定元素插入末尾：public boolean add(E e)<br>固定位置插入指定元素：public void add(int index,E element)<br>返回索引处元素：public E get(int index)<br>返回元素个数：public int size()<br>删除索引处元素，返回被删除元素：public E remove(int index)<br>删除指定元素，返回是否删除成功：public boolean remove(Object o)<br>修改索引处元素，返回被修改元素：public E set(int index,E element)</p>
+</blockquote>
+<h2 id="5、GUI编程"><a href="#5、GUI编程" class="headerlink" title="5、GUI编程"></a>5、GUI编程</h2><p>java的GUI编程包：</p>
+<blockquote>
+<p>AWT（不用）</p>
+<blockquote>
+<p>提供了一组原生GUI组件，依赖OS的本地窗口系统<br>Swing（常用）<br>基于AWT，提供了更丰富的GUI组件，轻量级组件，不依赖本地窗口系统</p>
+</blockquote>
+</blockquote>
+<p>常用Swing组件：</p>
+<blockquote>
+<p>JFrame：窗口<br>JPanel：用于组织其他组件的容器<br>JButton：按钮组件<br>JTextField：输入框<br>JTable：表格</p>
+</blockquote>
+<p>布局管理器：<br>可以决定组件在容器中的布局方式，避免了手动设置每个组件的位置和大小，从而简化了GUI设计过程</p>
+<p>常见布局管理器：</p>
+<blockquote>
+<p>FlowLayout<br>BorderLayout<br>GridLayout<br>BoxLayout</p>
+</blockquote>
+<h3 id="5-1、事件处理"><a href="#5-1、事件处理" class="headerlink" title="5.1、事件处理"></a>5.1、事件处理</h3><p>GUI编程中，事件的处理是通过事件监听器来完成的</p>
+<p>常用的事件监听器对象：</p>
+<blockquote>
+<p>点击事件监听器 ActionListener<br>按键事件监听器 KeyListener<br>鼠标行为监听器 MouseListener</p>
+</blockquote>
+<p>事件的几种常见写法：</p>
+<blockquote>
+<p>直接提供实现类，用于创建事件监听对象<br>直接使用匿名内部类的对象，代表事件监听对象<br>自定义窗口，让窗口对象实现事件接口</p>
+<blockquote>
+<p>实际最常用，一个窗口一个类，继承JFrame，实现事件监听器接口，窗口设置等都写在这个窗口类里</p>
+</blockquote>
+</blockquote>
 ]]></content>
       <categories>
         <category>java_base</category>
