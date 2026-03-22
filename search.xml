@@ -493,4 +493,227 @@
         <category>java_base</category>
       </categories>
   </entry>
+  <entry>
+    <title></title>
+    <url>/2026/03/21/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E4%B8%83%E9%83%A8%E5%88%86/</url>
+    <content><![CDATA[<h1 id="一、java加强"><a href="#一、java加强" class="headerlink" title="一、java加强"></a>一、java加强</h1><h2 id="1、异常"><a href="#1、异常" class="headerlink" title="1、异常"></a>1、异常</h2><p>异常代表程序出现的问题</p>
+<h3 id="1-1、java异常体系"><a href="#1-1、java异常体系" class="headerlink" title="1.1、java异常体系"></a>1.1、java异常体系</h3><blockquote>
+<ul>
+<li>Error：代表系统级别错误，属于严重问题（sun公司自己用）</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>Exception：异常，代表我们程序可能出现的问题</li>
+</ul>
+<blockquote>
+<ul>
+<li><p>运行时异常：RuntimeException及其子类，编译阶段不会报错，运行时出现的异常</p>
+</li>
+<li><p>编译时异常：编译阶段就会出现报错</p>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<h3 id="1-2、异常处理"><a href="#1-2、异常处理" class="headerlink" title="1.2、异常处理"></a>1.2、异常处理</h3><blockquote>
+<ul>
+<li><p>抛出异常（throws）：在方法上使用throws关键字，可以将方法内部出现的异常抛出去给调用者</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">方法 throws 异常1，异常2，异常3...&#123;</span><br><span class="line">	//方法体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">throw new 异常类名(&quot;错误信息&quot;)</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>捕获异常（try…catch）：直接捕获程序出现的异常</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">try&#123;</span><br><span class="line">	//监视可能出现异常的代码</span><br><span class="line">&#125;catch(异常类型1 变量)&#123;</span><br><span class="line">	//处理异常</span><br><span class="line">&#125;catch(异常类型2 变量)&#123;</span><br><span class="line">	//处理异常</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>（建议直接抛Exception异常，捕获也直接捕获Exception异常，可以处理所有异常）</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="1-3、异常的作用"><a href="#1-3、异常的作用" class="headerlink" title="1.3、异常的作用"></a>1.3、异常的作用</h3><blockquote>
+<ul>
+<li>异常是用来定位程序bug的关键信息</li>
+<li>可以作为方法内部的一种特殊返回值以便通知上层调用者，方法的执行问题</li>
+</ul>
+</blockquote>
+<h3 id="1-4、自定义异常"><a href="#1-4、自定义异常" class="headerlink" title="1.4、自定义异常"></a>1.4、自定义异常</h3><p>java无法为世界上全部问题提供异常类来代表，如果企业自己的某种问题想通过异常表示，以便用异常来管理该问题，那就需要自己来定义异常类了</p>
+<p>自定义运行时异常：</p>
+<blockquote>
+<ul>
+<li>定义一个异常类继承RuntimeException</li>
+<li>重写构造器</li>
+<li>通过throw new 异常类（xxx）来创建异常对象并抛出</li>
+</ul>
+</blockquote>
+<p>特点：编译阶段不报错，运行时才可能出现。提醒不属于激进型</p>
+<p>自定义编译时异常：</p>
+<blockquote>
+<ul>
+<li>定义一个异常类继承Exception</li>
+<li>重写构造器</li>
+<li>通过throw new 异常类（xxx）创建异常对象并抛出</li>
+</ul>
+</blockquote>
+<p>特点：编译阶段就报错，提醒比较激进</p>
+<h3 id="1-5、异常的处理"><a href="#1-5、异常的处理" class="headerlink" title="1.5、异常的处理"></a>1.5、异常的处理</h3><p>方案一（常用）：</p>
+<blockquote>
+<p>底层异常层层往上抛出，最外层捕获异常，记录下异常信息，并响应适合用户观看的信息进行提示</p>
+</blockquote>
+<p>方案二（少见）：</p>
+<blockquote>
+<p>最外层捕获异常后，尝试重新修复</p>
+</blockquote>
+<h2 id="2、泛型"><a href="#2、泛型" class="headerlink" title="2、泛型"></a>2、泛型</h2><p>定义类、接口、方法时，同时声明了一个或多个类型变量（如：<E>）称为泛型类、泛型接口、泛型方法，他们统称为泛型</p>
+<p>泛型支持的类型：泛型不支持基本数据类型，只能支持对象类型（引用数据类型）</p>
+<p>作用：泛型提供了在编译阶段约束所能操作的数据类型，并自动进行检查的能力。这样可以避免强制类型转换，及其可能出现的异常</p>
+<p>泛型的本质：编译阶段把具体的数据类型传给类型变量，将所有类型变量替换成具体数据类型。编译阶段过后，泛型会被擦除，所有类型恢复成Object类型</p>
+<p>注意：类型变量建议用大写的英文字母，常用E、T、K、V等（其中E一般代表元素类型，T一般代表返回值类型，K一般代表键类型，V一般代表值类型）</p>
+<h3 id="2-1、泛型类"><a href="#2-1、泛型类" class="headerlink" title="2.1、泛型类"></a>2.1、泛型类</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">修饰符 class 类名&lt;类型变量,类型变量,...&gt;&#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-2、泛型接口"><a href="#2-2、泛型接口" class="headerlink" title="2.2、泛型接口"></a>2.2、泛型接口</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">修饰符 interface 接口名&lt;类型变量,类型变量,...&gt;&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-3、泛型方法"><a href="#2-3、泛型方法" class="headerlink" title="2.3、泛型方法"></a>2.3、泛型方法</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">修饰符 &lt;类型变量,类型变量,...&gt; 返回值类型 方法名(形参列表)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：定义类型变量才是泛型方法，仅使用则不是泛型方法</p>
+<h3 id="2-4、通配符、上下限"><a href="#2-4、通配符、上下限" class="headerlink" title="2.4、通配符、上下限"></a>2.4、通配符、上下限</h3><p>通配符就是” ? “，可以在使用泛型的时候代表一切类型；E、T、K、V是在定义泛型的时候使用</p>
+<p>例如有一个父类car，其有两个子类BMW和BYD，虽然接收参数时可以使用car类型接收这三种类的对象，但如果用ArrayList存这三种类型，就不能使用ArrayList<car>接收了，因为car是BMW和BYD的父类，但ArrayList<car>和ArrayList<BMW>和ArrayList<BYD>没有任何关系，此时就可以使用通配符用ArrayList&lt;?&gt;接收三种类型了</p>
+<p>泛型上限：</p>
+<blockquote>
+<p><code>? extends 类型: ?</code></p>
+<p>能接收的必须是这个类型或其子类</p>
+</blockquote>
+<p>泛型下限：</p>
+<blockquote>
+<p><code>? super 类型: ?</code></p>
+<p>能接收的必须是这个类型或其父类</p>
+</blockquote>
+<h3 id="2-5、包装类"><a href="#2-5、包装类" class="headerlink" title="2.5、包装类"></a>2.5、包装类</h3><p>由于泛型不支持基本数据类型，因此我们可以使用包装类来间接使用基本数据类型</p>
+<p>包装类就是把基本类型的数据包装成对象的类型</p>
+<table>
+<thead>
+<tr>
+<th align="center">基本数据类型</th>
+<th align="center">对应的包装类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">byte</td>
+<td align="center">Byte</td>
+</tr>
+<tr>
+<td align="center">short</td>
+<td align="center">Short</td>
+</tr>
+<tr>
+<td align="center">int</td>
+<td align="center">Integer</td>
+</tr>
+<tr>
+<td align="center">long</td>
+<td align="center">Long</td>
+</tr>
+<tr>
+<td align="center">char</td>
+<td align="center">Character</td>
+</tr>
+<tr>
+<td align="center">float</td>
+<td align="center">Float</td>
+</tr>
+<tr>
+<td align="center">double</td>
+<td align="center">Double</td>
+</tr>
+<tr>
+<td align="center">boolean</td>
+<td align="center">Boolean</td>
+</tr>
+</tbody></table>
+<p>自动装箱：基本数据类型可以自动转换为包装类型</p>
+<ul>
+<li>可以使用 <code>包装类类型 对象名 = 数据</code></li>
+</ul>
+<p>自动拆箱：包装类型可以自动转换为基本数据类型</p>
+<ul>
+<li>可以使用 <code>基本数据类型 变量名 = 对应包装类对象</code></li>
+</ul>
+<p>包装类具备的其他功能</p>
+<ul>
+<li><p>可以把基本类型的数据转换成字符串类型（用的少）</p>
+</li>
+<li><p>可以把字符串类型的数值转换成数值本身对应的真实数据类型（用的多）</p>
+</li>
+</ul>
+<p>​	<code>基本数据类型 变量名 = 对应包装类.valueOf(字符串对象)</code></p>
+<h2 id="3、集合"><a href="#3、集合" class="headerlink" title="3、集合"></a>3、集合</h2><h3 id="3-1、集合体系结构"><a href="#3-1、集合体系结构" class="headerlink" title="3.1、集合体系结构"></a>3.1、集合体系结构</h3><p>Collection：单列集合，每个元素只包含一个值</p>
+<p>Map：双列集合，每个元素包含两个值（键值对）</p>
+<p>常见体系结构：</p>
+<blockquote>
+<p>接口Collection<E></p>
+<blockquote>
+<p>接口List<E></p>
+<blockquote>
+<p><strong>实现类ArrayList<E></strong></p>
+<p>实现类LinkedList<E></p>
+</blockquote>
+<p>接口Set<E></p>
+<blockquote>
+<p><strong>实现类HashSet<E></strong></p>
+<blockquote>
+<p>实现类LinkedHashSet<E></p>
+</blockquote>
+<p>实现类TreeSet<E></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Collection集合特点：</p>
+<ul>
+<li><p>List系列集合：添加的元素是有序、可重复、有索引</p>
+</li>
+<li><p>Set系列集合：添加的元素是无序、不重复、无索引（其中LinkedHashSet有序，TreeSet按照大小默认升序排序）</p>
+</li>
+</ul>
+<h3 id="3-2、Collection的常用功能"><a href="#3-2、Collection的常用功能" class="headerlink" title="3.2、Collection的常用功能"></a>3.2、Collection的常用功能</h3><table>
+<thead>
+<tr>
+<th align="center">方法名</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public boolean add(E e)</td>
+<td align="center">把给定的对象添加到当前集合中</td>
+</tr>
+<tr>
+<td align="center">public void clear()</td>
+<td align="center">清空集合中所有的元素</td>
+</tr>
+<tr>
+<td align="center">public boolean remove(E e)</td>
+<td align="center">把给定的对象在当前集合中删除</td>
+</tr>
+<tr>
+<td align="center">public boolean contains(Object obj)</td>
+<td align="center">判断当前集合中是否包含给定的对象</td>
+</tr>
+<tr>
+<td align="center">public boolean isEmpty()</td>
+<td align="center">判断当前集合是否为空</td>
+</tr>
+<tr>
+<td align="center">public int size()</td>
+<td align="center">返回集合中元素的个数</td>
+</tr>
+<tr>
+<td align="center">public Object[] toArray()</td>
+<td align="center">把集合中的元素存储到数组中</td>
+</tr>
+</tbody></table>
+]]></content>
+  </entry>
 </search>
