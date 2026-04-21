@@ -1263,4 +1263,714 @@
         <category>java_base</category>
       </categories>
   </entry>
+  <entry>
+    <title></title>
+    <url>/2026/04/21/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E4%B9%9D%E9%83%A8%E5%88%86/</url>
+    <content><![CDATA[<p>一、</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2026/04/19/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E5%85%AB%E9%83%A8%E5%88%86/</url>
+    <content><![CDATA[<h1 id="一、java加强"><a href="#一、java加强" class="headerlink" title="一、java加强"></a>一、java加强</h1><h2 id="1、File"><a href="#1、File" class="headerlink" title="1、File"></a>1、File</h2><p>File是java.io.包下的类，File类的对象，用于代表当前操作系统的文件（可以是文件或文件夹），并可以调用其提供的方法对文件进行操作（File类只能对文件本身进行操作，不能读写文件里面存储的数据）</p>
+<p>用File存储数据在<strong>断电后不会消失</strong>，存储在磁盘中</p>
+<p><strong>注意</strong>：File封装的对象仅仅是一个路径名，这个路径可以是存在的，也允许是不存在的</p>
+<p><strong>创建File类的对象</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">构造器</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public  <strong>File</strong>(String pathname)</td>
+<td align="center">根据文件路径创建文件对象</td>
+</tr>
+<tr>
+<td align="center">public <strong>File</strong>(String parent, String child)</td>
+<td align="center">根据父路径和子路径名字创建文件对象</td>
+</tr>
+<tr>
+<td align="center">public <strong>File</strong>(File parent, String child)</td>
+<td align="center">根据父路径对应文件对象和子路径名字创建文件对象</td>
+</tr>
+</tbody></table>
+<p><strong>File提供的判断文件类型、获取文件信息功能</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">方法名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public boolean <strong>exists</strong>()</td>
+<td align="center">判断当前文件对象对应的文件路径是否存在，存在返回true</td>
+</tr>
+<tr>
+<td align="center">public boolean <strong>isFile</strong>()</td>
+<td align="center">判断当前文件对象指代的是否是文件，是文件返回true</td>
+</tr>
+<tr>
+<td align="center">public boolean <strong>isDirectory</strong>()</td>
+<td align="center">判断当前文件对象指代的是否是文件夹，是文件夹返回true</td>
+</tr>
+<tr>
+<td align="center">public String <strong>getName</strong>()</td>
+<td align="center">获取文件的名称（包含后缀）</td>
+</tr>
+<tr>
+<td align="center">public long <strong>length</strong>()</td>
+<td align="center">获取文件的大小，返回字节个数</td>
+</tr>
+<tr>
+<td align="center">public long <strong>lastModified</strong>()</td>
+<td align="center">获取文件的最后修改时间</td>
+</tr>
+<tr>
+<td align="center">public String <strong>getPath</strong>()</td>
+<td align="center">获取创建文件对象时，使用的路径</td>
+</tr>
+<tr>
+<td align="center">public String <strong>getAbsolutePath</strong>()</td>
+<td align="center">获取绝对路径</td>
+</tr>
+</tbody></table>
+<p>可以使用相对路径定位文件对象（默认到idea工程下直接寻找文件，一般用来找工程下的项目文件）</p>
+<p><strong>File提供的创建和删除文件的方法</strong></p>
+<p><strong>File类创建文件的功能</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">方法名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public boolean <strong>createNewFile</strong>()</td>
+<td align="center">创建一个新的空的文件</td>
+</tr>
+<tr>
+<td align="center">public boolean <strong>mkdir</strong>()</td>
+<td align="center">只能创建一级文件夹</td>
+</tr>
+<tr>
+<td align="center">public boolean <strong>mkdirs</strong>()</td>
+<td align="center">可以创建多级文件夹</td>
+</tr>
+</tbody></table>
+<p><strong>File类删除文件的功能</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">方法名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public boolean <strong>delete</strong>()</td>
+<td align="center">删除文件、空文件夹（删除不会进回收站，直接抹除）</td>
+</tr>
+</tbody></table>
+<p><strong>File提供的遍历文件夹的方法</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">方法名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public String[] <strong>list</strong>()</td>
+<td align="center">获取当前目录下所有的“一级文件名称”到一个字符串数组中去返回</td>
+</tr>
+<tr>
+<td align="center">public File[] <strong>listFiles</strong>()</td>
+<td align="center">获取当前目录下所有的“一级文件对象”到一个文件对象数组中去返回（重点）</td>
+</tr>
+</tbody></table>
+<p><strong>使用listFiles方法时的注意事项</strong>：</p>
+<ul>
+<li>当主调是文件，或者路径不存在时，返回null</li>
+<li>当主调是空文件夹时，返回一个长度为0的数组</li>
+<li>当主调是一个有内容的文件夹时，将里面所有一级文件和文件夹的路径放在File数组中返回（有隐藏文件也返回）</li>
+<li>当主调是一个文件夹，但是没有权限访问该文件夹时，返回null</li>
+</ul>
+<h2 id="2、字符集"><a href="#2、字符集" class="headerlink" title="2、字符集"></a>2、字符集</h2><p><strong>使用程序对字符进行编码和解码操作</strong></p>
+<p><strong>对字符的编码</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">String提供了如下方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">byte[] <strong>getBytes</strong>()</td>
+<td align="center">使用平台的默认字符集将该String编码为一系列字节，将结果存储到新的字节数组中</td>
+</tr>
+<tr>
+<td align="center">byte[] <strong>getBytes</strong>(String charsetName)</td>
+<td align="center">使用指定的字符集将该String编码为一系列字节，将结果存储到新的字节数组中</td>
+</tr>
+</tbody></table>
+<p><strong>对字符的解码</strong>（使用String构造器）</p>
+<table>
+<thead>
+<tr>
+<th align="center">String提供了如下方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>String</strong>(byte[] bytes)</td>
+<td align="center">通过使用平台的默认字符集解码指定的字节数组来构造新的String</td>
+</tr>
+<tr>
+<td align="center"><strong>String</strong>(byte[] bytes, String charsetName)</td>
+<td align="center">通过指定的字符集解码指定的字节数组来构造新的String</td>
+</tr>
+</tbody></table>
+<h2 id="3、IO流"><a href="#3、IO流" class="headerlink" title="3、IO流"></a>3、IO流</h2><p>IO流是用于读写数据的（可以读写文件或网络中的数据）</p>
+<h3 id="3-1、IO流分类"><a href="#3-1、IO流分类" class="headerlink" title="3.1、IO流分类"></a>3.1、IO流分类</h3><p>按照流方向分：</p>
+<ul>
+<li>输入流</li>
+<li>输出流</li>
+</ul>
+<p>按照流内容分：</p>
+<ul>
+<li>字节流（适合操作所有类型的文件）</li>
+<li>字符流（只适合操作纯文本文件）</li>
+</ul>
+<p>两两组合为四种抽象类：</p>
+<ul>
+<li>字节输入流InputStream</li>
+<li>字节输出流OutputStream</li>
+<li>字符输入流Reader</li>
+<li>字符输出流Writer</li>
+</ul>
+<p>各自的实现类为：</p>
+<ul>
+<li>文件字节输入流FileInputStream</li>
+<li>文件字节输出流FileOutputStream</li>
+<li>文件字符输入流FileReader</li>
+<li>文件字符输出流FileWriter</li>
+</ul>
+<p><strong>注意事项</strong>：</p>
+<p>使用字节流读取中文容易发生截断导致解码时乱码；使用字符流读取中文按一个个字符读取，不会出现乱码（除非编码不一致，字符流才会乱码，例如一个用GBK一个用UTF-8）</p>
+<h4 id="3-1-1、文件字节输入流FileInputStream"><a href="#3-1-1、文件字节输入流FileInputStream" class="headerlink" title="3.1.1、文件字节输入流FileInputStream"></a>3.1.1、文件字节输入流FileInputStream</h4><p><strong>作用</strong>：</p>
+<p>以内存为基准，可以把磁盘文件中的数据以字节的形式读入到内存中去</p>
+<table>
+<thead>
+<tr>
+<th align="center">构造器</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public <strong>FileInputStream</strong>(File file)</td>
+<td align="center">创建字节输入流管道与源文件接通</td>
+</tr>
+<tr>
+<td align="center">public <strong>FileInputStream</strong>(String pathname)</td>
+<td align="center">创建字节输入流管道与源文件接通</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">方法名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public int <strong>read</strong>()</td>
+<td align="center">每次读取一个字节返回，如果发现没有数据可读会返回-1</td>
+</tr>
+<tr>
+<td align="center">public int <strong>read</strong>(byte[] buffer)</td>
+<td align="center">每次用一个字节数组去读取数据，返回字节数组读取了多少个字节，如果发现没有数据可读会返回-1</td>
+</tr>
+<tr>
+<td align="center">public byte[] <strong>readAllBytes</strong>() throws IOException</td>
+<td align="center">直接将当前字节输入流对应的文件对象的字节数据装到一个字节数组返回</td>
+</tr>
+</tbody></table>
+<h4 id="3-1-2、文件字节输出流FileOutputStream"><a href="#3-1-2、文件字节输出流FileOutputStream" class="headerlink" title="3.1.2、文件字节输出流FileOutputStream"></a>3.1.2、文件字节输出流FileOutputStream</h4><p><strong>作用</strong>：</p>
+<p>以内存为基准，把内存中的数据以字节的形式写出到文件中去</p>
+<table>
+<thead>
+<tr>
+<th align="center">构造器</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public <strong>FileOutputStream</strong>(File file)</td>
+<td align="center">创建字节输出流管道与源文件对象接通（创建管道时将文件内容清空）</td>
+</tr>
+<tr>
+<td align="center">public <strong>FileOutputStream</strong>(String filepath)</td>
+<td align="center">创建字节输出流管道与源文件路径接通（创建管道时将文件内容清空）</td>
+</tr>
+<tr>
+<td align="center">public <strong>FileOutputStream</strong>(File file, boolean append)</td>
+<td align="center">创建字节输出流管道与源文件对象接通，可追加数据</td>
+</tr>
+<tr>
+<td align="center">public <strong>FileOutputStream</strong>(String filepath, boolean append)</td>
+<td align="center">创建字节输出流管道与源文件路径接通，可追加数据</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">方法名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public void <strong>write</strong>(int a)</td>
+<td align="center">写一个字节出去</td>
+</tr>
+<tr>
+<td align="center">public void <strong>write</strong>(byte[] buffer)</td>
+<td align="center">写一个字节数组出去</td>
+</tr>
+<tr>
+<td align="center">public void <strong>write</strong>(byte[] buffer, int pos, int len)</td>
+<td align="center">写一个字节数组的一部分出去</td>
+</tr>
+<tr>
+<td align="center">public void <strong>close</strong>() throws IOException</td>
+<td align="center">关闭流</td>
+</tr>
+</tbody></table>
+<h4 id="3-1-3、文件字符输入流FileReader"><a href="#3-1-3、文件字符输入流FileReader" class="headerlink" title="3.1.3、文件字符输入流FileReader"></a>3.1.3、文件字符输入流FileReader</h4><p><strong>作用</strong>：</p>
+<p>以内存为基准，可以把文件中的数据以字符的形式读入到内存中去（一个汉字也是一个字符）</p>
+<table>
+<thead>
+<tr>
+<th align="center">构造器</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public <strong>FileReader</strong>(File file)</td>
+<td align="center">创建字符输入流管道与源文件接通</td>
+</tr>
+<tr>
+<td align="center">public <strong>FileReader</strong>(String pathname)</td>
+<td align="center">创建字符输入流管道与源文件接通</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">方法名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public int <strong>read</strong>()</td>
+<td align="center">每次读取一个字符返回，如果发现没有数据可读会返回-1</td>
+</tr>
+<tr>
+<td align="center">public int <strong>read</strong>(char[] buffer)</td>
+<td align="center">每次用一个字符数组去读取数据，返回字符数组读取了多少个字符，如果发现没有数据可读会返回-1</td>
+</tr>
+</tbody></table>
+<h4 id="3-1-4、文件字符输出流FileWriter"><a href="#3-1-4、文件字符输出流FileWriter" class="headerlink" title="3.1.4、文件字符输出流FileWriter"></a>3.1.4、文件字符输出流FileWriter</h4><p><strong>作用</strong>：</p>
+<p>以内存为基准，把内存中的数据以字符的形式写出到文件中去</p>
+<table>
+<thead>
+<tr>
+<th align="center">构造器</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public <strong>FileWriter</strong>(File file)</td>
+<td align="center">创建字节输出流管道与源文件对象接通（创建管道时将文件内容清空）</td>
+</tr>
+<tr>
+<td align="center">public <strong>FileWriter</strong>(String filepath)</td>
+<td align="center">创建字节输出流管道与源文件路径接通（创建管道时将文件内容清空）</td>
+</tr>
+<tr>
+<td align="center">public <strong>FileWriter</strong>(File file, boolean append)</td>
+<td align="center">创建字节输出流管道与源文件对象接通，可追加数据</td>
+</tr>
+<tr>
+<td align="center">public <strong>FileWriter</strong>(String filepath, boolean append)</td>
+<td align="center">创建字节输出流管道与源文件路径接通，可追加数据</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">方法名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">void <strong>write</strong>(int c)</td>
+<td align="center">写一个字符</td>
+</tr>
+<tr>
+<td align="center">void <strong>write</strong>(String str)</td>
+<td align="center">写一个字符串</td>
+</tr>
+<tr>
+<td align="center">void <strong>write</strong>(String str, int off, int len)</td>
+<td align="center">写一个字符串的一部分</td>
+</tr>
+<tr>
+<td align="center">void <strong>write</strong>(char[] cbuf)</td>
+<td align="center">写入一个字符数组</td>
+</tr>
+<tr>
+<td align="center">void <strong>write</strong>(char[] cbuf, int off, int len)</td>
+<td align="center">写入字符数组的一部分</td>
+</tr>
+</tbody></table>
+<p>字符输出流的<strong>注意事项</strong>：</p>
+<p>字符输出流写出数据后只是写到内存缓冲区，必须刷新流，或者关闭流，数据才能写入磁盘，写出去的数据才能生效</p>
+<table>
+<thead>
+<tr>
+<th align="center">方法名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public void <strong>flush</strong>() throws IOException</td>
+<td align="center">刷新流，就是将内存中缓存的数据立即写到文件中去生效，刷新后流还能使用</td>
+</tr>
+<tr>
+<td align="center">public void <strong>close</strong>() throws IOException</td>
+<td align="center">关闭流的操作，包含了刷新</td>
+</tr>
+</tbody></table>
+<h3 id="3-2、缓冲流"><a href="#3-2、缓冲流" class="headerlink" title="3.2、缓冲流"></a>3.2、缓冲流</h3><p>为了提高性能，引出了四个缓冲流，四个缓冲流也都属于下列四个抽象类</p>
+<ul>
+<li>字节输入流InputStream</li>
+<li>字节输出流OutputStream</li>
+<li>字符输入流Reader</li>
+<li>字符输出流Writer</li>
+</ul>
+<h4 id="3-2-1、缓冲字节输入流BufferedInputStream"><a href="#3-2-1、缓冲字节输入流BufferedInputStream" class="headerlink" title="3.2.1、缓冲字节输入流BufferedInputStream"></a>3.2.1、缓冲字节输入流BufferedInputStream</h4><p><strong>作用</strong>：可以提高字节输入流读取数据的性能</p>
+<p><strong>原理</strong>：缓冲字节输入流自带了8KB缓冲池，一次读入内存8KB</p>
+<table>
+<thead>
+<tr>
+<th align="center">构造器</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public <strong>BufferedInputStream</strong>(InputStream is)</td>
+<td align="center">把低级的字节输入流包装成一个高级的缓冲字节输入流，从而提高读数据的性能</td>
+</tr>
+</tbody></table>
+<h4 id="3-2-2、缓冲字节输出流BufferedOutputStream"><a href="#3-2-2、缓冲字节输出流BufferedOutputStream" class="headerlink" title="3.2.2、缓冲字节输出流BufferedOutputStream"></a>3.2.2、缓冲字节输出流BufferedOutputStream</h4><p><strong>作用</strong>：可以提高字节输出流写入数据的性能</p>
+<p><strong>原理</strong>：缓冲字节输出流自带了8KB缓冲池，一次写入磁盘8KB</p>
+<table>
+<thead>
+<tr>
+<th align="center">构造器</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public <strong>BufferedOutputStream</strong>(OutputStream os)</td>
+<td align="center">把低级的字节输出流包装成一个高级的缓冲字节输出流，从而提高写数据的性能</td>
+</tr>
+</tbody></table>
+<h4 id="3-2-3、缓冲字符输入流BufferedReader"><a href="#3-2-3、缓冲字符输入流BufferedReader" class="headerlink" title="3.2.3、缓冲字符输入流BufferedReader"></a>3.2.3、缓冲字符输入流BufferedReader</h4><p><strong>作用</strong>：可以提高字符输入流读取字符数据的性能</p>
+<p><strong>原理</strong>：自带8K字符的字符缓冲池</p>
+<table>
+<thead>
+<tr>
+<th align="center">构造器</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public <strong>BufferedReader</strong>(Reader r)</td>
+<td align="center">把低级的字符输入流包装成缓冲字符输入流管道，从而提高字符输入流读字符数据的性能</td>
+</tr>
+</tbody></table>
+<p><strong>缓冲字符输入流新增功能</strong>：按照行读取字符</p>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public String <strong>readLine</strong>()</td>
+<td align="center">读取一行数据返回，如果没有数据可读了，会返回null</td>
+</tr>
+</tbody></table>
+<h4 id="3-2-4、缓冲字符输出流BufferedWriter"><a href="#3-2-4、缓冲字符输出流BufferedWriter" class="headerlink" title="3.2.4、缓冲字符输出流BufferedWriter"></a>3.2.4、缓冲字符输出流BufferedWriter</h4><p><strong>作用</strong>：可以提高字符输出流写入字符数据的性能</p>
+<p><strong>原理</strong>：自带8K字符的字符缓冲池</p>
+<table>
+<thead>
+<tr>
+<th align="center">构造器</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public <strong>BufferedWriter</strong>(Writer r)</td>
+<td align="center">把低级的字符输出流包装成一个高级的缓冲字符输出流管道，从而提高字符输出流写数据的性能</td>
+</tr>
+</tbody></table>
+<p><strong>缓冲字符输出流新增功能</strong>：换行</p>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public void <strong>newLine</strong>()</td>
+<td align="center">换行</td>
+</tr>
+</tbody></table>
+<h3 id="3-3、其他流"><a href="#3-3、其他流" class="headerlink" title="3.3、其他流"></a>3.3、其他流</h3><h4 id="3-3-1、字符输入转换流InputStreamReader"><a href="#3-3-1、字符输入转换流InputStreamReader" class="headerlink" title="3.3.1、字符输入转换流InputStreamReader"></a>3.3.1、字符输入转换流InputStreamReader</h4><p>继承自字符输入流Reader</p>
+<p><strong>作用</strong>：解决不同编码时，字符流读取文本内容乱码的问题</p>
+<p><strong>原理</strong>：先获取文件的原始字节流，再将其按真实的字符集编码转成字符输入流，这样字符输入流中的字符就不乱码了</p>
+<table>
+<thead>
+<tr>
+<th align="center">构造器</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public <strong>InputStreamReader</strong>(InputStream is)</td>
+<td align="center">把原始的字节输入流，按照平台默认编码转成字符输入流（与直接用FileReader的效果一样）</td>
+</tr>
+<tr>
+<td align="center">public <strong>InputStreamReader</strong>(InputStream is, String charset)</td>
+<td align="center">把原始的字节输入流，按照指定字符集编码转成字符输入流（<strong>重点</strong>）</td>
+</tr>
+</tbody></table>
+<h4 id="3-3-2、打印流"><a href="#3-3-2、打印流" class="headerlink" title="3.3.2、打印流"></a>3.3.2、打印流</h4><p>PrintStream（继承自字节输出流） &#x2F; PrintWriter（继承自字符输出流）</p>
+<p>两个打印流使用方式一样，只不过PrintStream支持写字节，PrintWrite支持写字符</p>
+<p><strong>作用</strong>：打印流可以实现更方便、更高效的打印数据出去，能实现打印啥出去就是啥出去（例如：打印97就是打印97这个数，而不是打印字符a）</p>
+<table>
+<thead>
+<tr>
+<th align="center">构造器</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public <strong>PrintStream</strong>(OutputStream&#x2F;File&#x2F;String)</td>
+<td align="center">打印流直接通向字节输出流&#x2F;文件&#x2F;文件路径</td>
+</tr>
+<tr>
+<td align="center">public <strong>PrintStream</strong>(String fileName, Charset charset)</td>
+<td align="center">可以指定写出去的字符编码</td>
+</tr>
+<tr>
+<td align="center">public <strong>PrintStream</strong>(OutputStream out, boolean autoFlush)</td>
+<td align="center">可以指定实现自动刷新</td>
+</tr>
+<tr>
+<td align="center">public <strong>PrintStream</strong>(OutputStream out, boolean autoFlush, String encoding)</td>
+<td align="center">可以指定实现自动刷新，并可指定字符的编码</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public void <strong>println</strong>(Xxx xx)</td>
+<td align="center">打印任意类型的数据出去（<strong>重点</strong>）</td>
+</tr>
+<tr>
+<td align="center">public void <strong>write</strong>(int&#x2F;byte[]&#x2F;byte[]一部分)</td>
+<td align="center">可以支持写字节数据出去</td>
+</tr>
+</tbody></table>
+<p><strong>注意</strong>：如果想追加数据，可以在打印流里面包装一个低级管道，用低级管道的append功能</p>
+<h4 id="3-3-3、特殊数据流"><a href="#3-3-3、特殊数据流" class="headerlink" title="3.3.3、特殊数据流"></a>3.3.3、特殊数据流</h4><h5 id="3-3-3-1、数据输出流DataOutputStream"><a href="#3-3-3-1、数据输出流DataOutputStream" class="headerlink" title="3.3.3.1、数据输出流DataOutputStream"></a>3.3.3.1、数据输出流DataOutputStream</h5><p>允许把数据和其类型一并写出去</p>
+<table>
+<thead>
+<tr>
+<th align="center">构造器</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public <strong>DataOutputStream</strong>(OutputStream out)</td>
+<td align="center">创建新数据输出流包装基础的字节输出流</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public final void <strong>writeByte</strong>(int v) throws IOException</td>
+<td align="center">将byte类型的数据写入基础的字节输出流</td>
+</tr>
+<tr>
+<td align="center">public final void <strong>writeInt</strong>(int v) throws IOException</td>
+<td align="center">将int类型的数据写入基础的字节输出流</td>
+</tr>
+<tr>
+<td align="center">public final void <strong>writeDouble</strong>(Double v) throws IOException</td>
+<td align="center">将double类型的数据写入基础的字节输出流</td>
+</tr>
+<tr>
+<td align="center">public final void <strong>writeUTF</strong>(String str) throws IOException</td>
+<td align="center">将字符串数据以UTF-8编码成字节写入基础的字节输出流</td>
+</tr>
+<tr>
+<td align="center">public void <strong>write</strong>(int&#x2F;byte[]&#x2F;byte[]一部分)</td>
+<td align="center">支持写字节数据出去</td>
+</tr>
+</tbody></table>
+<h5 id="3-3-3-2、数据输入流DataInputStream"><a href="#3-3-3-2、数据输入流DataInputStream" class="headerlink" title="3.3.3.2、数据输入流DataInputStream"></a>3.3.3.2、数据输入流DataInputStream</h5><p>用于读取数据输出流写出去的数据（怎么写就要怎么读，类型要对应上，并且不能跳位）</p>
+<table>
+<thead>
+<tr>
+<th align="center">构造器</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public <strong>DataInputStream</strong>(InputStream is)</td>
+<td align="center">创建新数据输入流包装基础的字节输入流</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public final byte <strong>readByte</strong>() throws IOException</td>
+<td align="center">读取字节数据返回</td>
+</tr>
+<tr>
+<td align="center">public final int <strong>readInt</strong>() throws IOException</td>
+<td align="center">读取int类型的数据返回</td>
+</tr>
+<tr>
+<td align="center">public final double <strong>readDouble</strong>() throws IOException</td>
+<td align="center">读取double类型的数据返回</td>
+</tr>
+<tr>
+<td align="center">public final String <strong>readUTF</strong>() throws IOException</td>
+<td align="center">读取字符串数据（UTF-8）返回</td>
+</tr>
+<tr>
+<td align="center">public int <strong>readInt</strong>()&#x2F; <strong>read</strong>(byte[])</td>
+<td align="center">支持读字节数据进来</td>
+</tr>
+</tbody></table>
+<h3 id="3-4、文件复制"><a href="#3-4、文件复制" class="headerlink" title="3.4、文件复制"></a>3.4、文件复制</h3><p><strong>字节流非常适合做文件的复制操作</strong></p>
+<p>任何文件的底层都是字节，字节流做复制，是一字不漏的转移完全部字节，只要复制后的文件格式一致就没问题。复制只是搬运，并不需要解码，所以不会发生读取中文乱码的情况</p>
+<h3 id="3-5、资源释放问题"><a href="#3-5、资源释放问题" class="headerlink" title="3.5、资源释放问题"></a>3.5、资源释放问题</h3><p><strong>资源释放方案一</strong>：</p>
+<ul>
+<li>try-catch-finally（释放资源不好用）</li>
+</ul>
+<p>finally代码区的<strong>特点</strong>：无论try中的程序是正常执行了，还是出现了异常，最后都一定会执行finally区，除非JVM终止</p>
+<p><strong>作用</strong>：一般用于在程序执行完成后进行资源的释放操作</p>
+<p><strong>注意</strong>：在try中定义的管道生命周期只在try代码块，finally中访问不到。但完全放在外部又无法处理管道异常。所以可以在外部定义管道指向null，在try中实例化管道，如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">InputStream fis = null;</span><br><span class="line">OutputStream fos = null;</span><br><span class="line">try&#123;</span><br><span class="line">	fis = new FileInputStream(srcPath);</span><br><span class="line">	fos = new FileOutputStream(destPath);</span><br><span class="line">	...</span><br><span class="line">&#125;catch(Exception e)&#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">&#125;finally&#123;</span><br><span class="line">	try&#123;</span><br><span class="line">		if(fos != null)&#123;</span><br><span class="line">			fos.close();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;catch(Exception e)&#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">	try&#123;</span><br><span class="line">		if(fis != null)&#123;</span><br><span class="line">			fis.close();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;catch(Exception e)&#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：上述代码在关闭管道时也可能会抛异常，所以关闭管道时也用try-catch</p>
+<p><strong>资源释放方案二</strong>：</p>
+<ul>
+<li>try-with-resource（释放资源推荐使用）</li>
+</ul>
+<p>JDK 7开始提供了更简单的资源释放方案try-with-resource，资源使用完毕后，会自动调用其close（）方法，完成对资源的释放</p>
+<p><strong>模板</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">try(定义资源1;定义资源2;...)&#123;</span><br><span class="line">	可能出现异常的代码;</span><br><span class="line">&#125;catch(异常类名 变量名)&#123;</span><br><span class="line">	异常的处理代码;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">try(</span><br><span class="line">	InputStream fis = new FileInputStream(srcPath);</span><br><span class="line">	OutputStream fos = new FileOutputStream(destPath);</span><br><span class="line">)&#123;</span><br><span class="line">	...</span><br><span class="line">&#125;catch(Exception e)&#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：try后面的()中只能放置资源，否则报错（资源一般指的是最终实现了AutoCloseable接口）</p>
+<h3 id="3-6、IO框架"><a href="#3-6、IO框架" class="headerlink" title="3.6、IO框架"></a>3.6、IO框架</h3><p><strong>框架（Framework）</strong>：是一个预先写好的代码库或一组工具，旨在简化和加速开发过程</p>
+<p><strong>框架的形式</strong>：一般是把类、接口等编译成class形式，再压缩成一个.jar结尾的文件发行出去</p>
+<p><strong>IO框架</strong>：封装了Java提供的对文件、数据进行操作的代码，对外提供了更简单的方式来对文件进行操作，对数据进行读写等</p>
+<p><strong>导入commons-io-版本号.jar框架到项目中去</strong>：</p>
+<ol>
+<li>官网下载commons-io的jar压缩包</li>
+<li>在项目中创建一个文件夹：lib</li>
+<li>将commons-io的jar文件（注意不是整个文件夹，是其中的jar文件）复制到lib文件夹</li>
+<li>编译器中在jar文件上右键，选择Add as Library  -&gt;  点击OK</li>
+<li>在类中导包使用</li>
+</ol>
+<p>commons-io框架</p>
+<table>
+<thead>
+<tr>
+<th align="center">FileUtils类提供的部分方法展示</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public static void <strong>copyFile</strong>(File srcFile, File destFile)</td>
+<td align="center">复制文件</td>
+</tr>
+<tr>
+<td align="center">public static void <strong>copyDirectory</strong>(File srcDir, File destDir)</td>
+<td align="center">复制文件夹</td>
+</tr>
+<tr>
+<td align="center">public static void <strong>deleteDirectory</strong>(File directory)</td>
+<td align="center">删除文件夹</td>
+</tr>
+<tr>
+<td align="center">public static String <strong>readFileToString</strong>(File file, String encoding)</td>
+<td align="center">读数据</td>
+</tr>
+<tr>
+<td align="center">public static void <strong>writeStringToFile</strong>(File file, String data, String charname, boolean append)</td>
+<td align="center">写数据</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">IOUtils类提供的部分方法展示</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public static int <strong>copy</strong>(InputStream inputStream, OutputStream outputStream)</td>
+<td align="center">复制文件</td>
+</tr>
+<tr>
+<td align="center">public static int <strong>copy</strong>(Reader reader, Writer writer)</td>
+<td align="center">复制文件</td>
+</tr>
+<tr>
+<td align="center">public static void <strong>write</strong>(String data, OutputStream output, String charsetName)</td>
+<td align="center">写数据</td>
+</tr>
+</tbody></table>
+]]></content>
+  </entry>
 </search>
