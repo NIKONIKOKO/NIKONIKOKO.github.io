@@ -1,23 +1,23 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>不夜 | 不夜</title><meta name="author" content="不夜"><meta name="copyright" content="不夜"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一、">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>java基础第九部分 | 不夜</title><meta name="author" content="不夜"><meta name="copyright" content="不夜"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一、java加强1、多线程线程：一个程序内部的一条执行流程 多线程：从软硬件上实现的多条执行流程的技术（多条线程由CPU负责调度执行） 1.1、创建线程 多线程的创建方式一：继承Thread类   定义一个子类继承线程类java.lang.Thread，重写run()方法（run()方法为线程具体要执行的任务） 创建子类对象 调用线程对象的start()方法启动线程（启动后线程还是执行自己的run">
 <meta property="og:type" content="article">
-<meta property="og:title" content="不夜">
+<meta property="og:title" content="java基础第九部分">
 <meta property="og:url" content="http://example.com/2026/04/21/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E4%B9%9D%E9%83%A8%E5%88%86/index.html">
 <meta property="og:site_name" content="不夜">
-<meta property="og:description" content="一、">
+<meta property="og:description" content="一、java加强1、多线程线程：一个程序内部的一条执行流程 多线程：从软硬件上实现的多条执行流程的技术（多条线程由CPU负责调度执行） 1.1、创建线程 多线程的创建方式一：继承Thread类   定义一个子类继承线程类java.lang.Thread，重写run()方法（run()方法为线程具体要执行的任务） 创建子类对象 调用线程对象的start()方法启动线程（启动后线程还是执行自己的run">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/butterfly-icon.png">
-<meta property="article:published_time" content="2026-04-21T08:38:11.062Z">
-<meta property="article:modified_time" content="2026-04-21T09:19:56.194Z">
+<meta property="article:published_time" content="2026-04-21T09:38:30.000Z">
+<meta property="article:modified_time" content="2026-04-27T09:05:11.387Z">
 <meta property="article:author" content="不夜">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/img/butterfly-icon.png"><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "",
+  "headline": "java基础第九部分",
   "url": "http://example.com/2026/04/21/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E4%B9%9D%E9%83%A8%E5%88%86/",
   "image": "http://example.com/img/butterfly-icon.png",
-  "datePublished": "2026-04-21T08:38:11.062Z",
-  "dateModified": "2026-04-21T09:19:56.194Z",
+  "datePublished": "2026-04-21T09:38:30.000Z",
+  "dateModified": "2026-04-27T09:05:11.387Z",
   "author": [
     {
       "@type": "Person",
@@ -154,9 +154,381 @@
   },
   autoDarkmode: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: '不夜',
+  title: 'java基础第九部分',
   isHighlightShrink: false,
-  isToc: false,
+  isToc: true,
   pageType: 'post'
-}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">不夜</span></a><a class="nav-page-title" href="/"><span class="site-name">不夜</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div></div></nav><div id="post-info"><h1 class="post-title">无标题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-04-21T08:38:11.062Z" title="发表于 2026-04-21 16:38:11">2026-04-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-04-21T09:19:56.194Z" title="更新于 2026-04-21 17:19:56">2026-04-21</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>一、</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">不夜</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2026/04/21/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E4%B9%9D%E9%83%A8%E5%88%86/">http://example.com/2026/04/21/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E4%B9%9D%E9%83%A8%E5%88%86/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">不夜</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/04/21/%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8DTypora%E5%85%89%E6%A0%87%E5%8A%AB%E6%8C%81/" title=""><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2"></div></div><div class="info-2"><div class="info-item-1">创建.md文件后，删除首部标签栏 </div></div></div></a><a class="pagination-related" href="/2026/04/19/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E5%85%AB%E9%83%A8%E5%88%86/" title=""><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2"></div></div><div class="info-2"><div class="info-item-1">一、java加强1、FileFile是java.io.包下的类，File类的对象，用于代表当前操作系统的文件（可以是文件或文件夹），并可以调用其提供的方法对文件进行操作（File类只能对文件本身进行操作，不能读写文件里面存储的数据） 用File存储数据在断电后不会消失，存储在磁盘中 注意：File封装的对象仅仅是一个路径名，这个路径可以是存在的，也允许是不存在的 创建File类的对象    构造器 说明    public  File(String pathname) 根据文件路径创建文件对象   public File(String parent, String child) 根据父路径和子路径名字创建文件对象   public File(File parent, String child) 根据父路径对应文件对象和子路径名字创建文件对象   File提供的判断文件类型、获取文件信息功能    方法名称 说明    public boolean exists() 判断当前文件对象对应的文件路径是否存在，存在返回true   public boolean isFile() 判断当...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">不夜</div><div class="author-info-description">study</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/NIKONIKOKO" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:1029173431@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/21/%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8DTypora%E5%85%89%E6%A0%87%E5%8A%AB%E6%8C%81/" title="无标题">无标题</a><time datetime="2026-04-21T08:39:40.836Z" title="发表于 2026-04-21 16:39:40">2026-04-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/21/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E4%B9%9D%E9%83%A8%E5%88%86/" title="无标题">无标题</a><time datetime="2026-04-21T08:38:11.062Z" title="发表于 2026-04-21 16:38:11">2026-04-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/19/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E5%85%AB%E9%83%A8%E5%88%86/" title="无标题">无标题</a><time datetime="2026-04-19T07:25:13.605Z" title="发表于 2026-04-19 15:25:13">2026-04-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/21/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E4%B8%83%E9%83%A8%E5%88%86/" title="java基础第七部分">java基础第七部分</a><time datetime="2026-03-21T07:50:09.788Z" title="发表于 2026-03-21 15:50:09">2026-03-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/14/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E5%85%AD%E9%83%A8%E5%88%86/" title="java基础第六部分">java基础第六部分</a><time datetime="2026-03-14T08:50:03.000Z" title="发表于 2026-03-14 16:50:03">2026-03-14</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By 不夜</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章标题或内容..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">不夜</span></a><a class="nav-page-title" href="/"><span class="site-name">java基础第九部分</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div></div></nav><div id="post-info"><h1 class="post-title">java基础第九部分</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-04-21T09:38:30.000Z" title="发表于 2026-04-21 17:38:30">2026-04-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-04-27T09:05:11.387Z" title="更新于 2026-04-27 17:05:11">2026-04-27</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="一、java加强"><a href="#一、java加强" class="headerlink" title="一、java加强"></a>一、java加强</h1><h2 id="1、多线程"><a href="#1、多线程" class="headerlink" title="1、多线程"></a>1、多线程</h2><p><strong>线程</strong>：一个程序内部的一条执行流程</p>
+<p><strong>多线程</strong>：从软硬件上实现的多条执行流程的技术（多条线程由CPU负责调度执行）</p>
+<h3 id="1-1、创建线程"><a href="#1-1、创建线程" class="headerlink" title="1.1、创建线程"></a>1.1、创建线程</h3><ul>
+<li>多线程的创建<strong>方式一</strong>：继承Thread类</li>
+</ul>
+<ol>
+<li>定义一个子类继承线程类java.lang.Thread，重写run()方法（run()方法为线程具体要执行的任务）</li>
+<li>创建子类对象</li>
+<li>调用线程对象的start()方法启动线程（启动后线程还是执行自己的run()方法的）</li>
+</ol>
+<p>方式一<strong>优缺点</strong>：</p>
+<ol>
+<li><strong>优点</strong>：编码简单</li>
+<li><strong>缺点</strong>：线程类已经继承Thread，无法继承其他类，不利于功能的扩展；且重写的run()方法不能返回值</li>
+</ol>
+<p>方式一<strong>注意事项</strong>：</p>
+<ol>
+<li>启动线程必须是调用start()方法，而不是调用run()方法，直接调用run()方法会当成普通方法执行，此时相当于还是单线程执行。只有调用start()方法才是启动一个新的线程执行</li>
+<li>不要把主线程任务放在启动子线程之前</li>
+</ol>
+<ul>
+<li>多线程的创建<strong>方式二</strong>：实现Runnable接口来创建</li>
+</ul>
+<ol>
+<li><p>定义一个线程任务类实现Runnable接口，重写run()方法</p>
+</li>
+<li><p>创建线程任务类对象</p>
+</li>
+<li><p>把线程任务类对象包装成Thread对象（1、2、3步可以用匿名内部类一步解决，创建Runnable的匿名内部类对象并包装）</p>
+<table>
+<thead>
+<tr>
+<th align="center">Thread类提供的构造器</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public <strong>Thread</strong>(Runnable target)</td>
+<td align="center">封装Runnable对象成为线程对象</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>调用包装后的Thread对象的start()方法启动线程（start()方法是线程对象的而不是线程任务的，线程任务无法启动新线程，必须包装成线程对象才能启动新线程）</p>
+</li>
+</ol>
+<p>方式二<strong>优缺点</strong>：</p>
+<ol>
+<li><strong>优点</strong>：任务类只是实现接口，可以继续继承其他类，实现其他接口，扩展性强</li>
+<li><strong>缺点</strong>：需要多一个Runnable对象；且重写的run()方法不能返回值</li>
+</ol>
+<ul>
+<li>多线程的创建<strong>方式三</strong>：利用Callable接口、FutureTask类来实现</li>
+</ul>
+<ol>
+<li><p>创建任务对象</p>
+<ol>
+<li><p>定义一个类实现Callable接口，重写call方法，封装要做的事情，和要返回的数据</p>
+</li>
+<li><p>把Callable类型的对象封装成FutureTask（线程任务对象，本质是Runnable线程任务对象，可以交给Thread线程对象处理）</p>
+<table>
+<thead>
+<tr>
+<th align="center">FutureTask提供的构造器</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public <strong>FutureTask&lt;&gt;</strong>(Callable call)</td>
+<td align="center">把Callable对象封装成FutureTask对象</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+</li>
+<li><p>把线程任务对象交给Thread对象</p>
+</li>
+<li><p>调用Thread对象的start方法启动线程</p>
+</li>
+<li><p>线程执行完毕后，通过FutureTask对象的get方法获取线程任务执行的结果</p>
+<table>
+<thead>
+<tr>
+<th align="center">FutureTask提供的方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public V <strong>get</strong>() throws Exception</td>
+<td align="center">获取线程执行call方法返回的结果</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<p>方式三<strong>优缺点</strong>：</p>
+<ol>
+<li><strong>优点</strong>：线程任务类只是实现接口，可以继续继承类和实现接口，扩展性强；<strong>可以在线程执行完毕后去获取线程执行的结果</strong></li>
+<li><strong>缺点</strong>：编码复杂一点</li>
+</ol>
+<p>方式三<strong>示例</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">public class ThreadDemo3&#123;</span><br><span class="line">	public static void main(String[] args)&#123;</span><br><span class="line">		Callable&lt;返回类型&gt; c1 = new MyCallable();</span><br><span class="line">		FutureTask&lt;返回类型&gt; f1 = new FutureTask&lt;&gt;(c1);</span><br><span class="line">		Thread t1 = new Thread(f1);</span><br><span class="line">		t1.start();</span><br><span class="line">		</span><br><span class="line">		Callable&lt;返回类型&gt; c2 = new MyCallable();</span><br><span class="line">		FutureTask&lt;返回类型&gt; f2 = new FutureTask&lt;&gt;(c2);</span><br><span class="line">		Thread t2 = new Thread(f2);</span><br><span class="line">		t2.start();</span><br><span class="line">		//线程分开try-catch，防止一个抛异常后另一个也不能执行</span><br><span class="line">		try&#123;</span><br><span class="line">			//如果发现第一个线程还没有执行完毕，会让出CPU，等第一个线程执行完毕后，才会往下执行</span><br><span class="line">			System.out.println(f1.get());</span><br><span class="line">		&#125;catch(Exception e)&#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		try&#123;</span><br><span class="line">			//如果发现第二个线程还没有执行完毕，会让出CPU，等第二个线程执行完毕后，才会往下执行</span><br><span class="line">			System.out.println(f2.get());</span><br><span class="line">		&#125;catch(Exception e)&#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class MyCallable implements Callable&lt;返回类型&gt;&#123;</span><br><span class="line">	public MyCallable()&#123;&#125;</span><br><span class="line">	public 返回类型 call() throws Exception&#123;</span><br><span class="line">		//方法体</span><br><span class="line">		return 返回结果;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-2、Thread常用方法"><a href="#1-2、Thread常用方法" class="headerlink" title="1.2、Thread常用方法"></a>1.2、Thread常用方法</h3><table>
+<thead>
+<tr>
+<th align="center">Thread提供的常用方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public void <strong>run</strong>()</td>
+<td align="center">线程的任务方法</td>
+</tr>
+<tr>
+<td align="center">public void <strong>start</strong>()</td>
+<td align="center">启动线程</td>
+</tr>
+<tr>
+<td align="center">public String <strong>getName</strong>()</td>
+<td align="center">获取调用线程的名称，线程名称默认是Thread-索引</td>
+</tr>
+<tr>
+<td align="center">public void <strong>setName</strong>(String name)</td>
+<td align="center">为调用线程设置名称（启动线程前使用）</td>
+</tr>
+<tr>
+<td align="center">public static Thread <strong>currentThread</strong>()</td>
+<td align="center">获取调用线程的线程对象</td>
+</tr>
+<tr>
+<td align="center">public static void <strong>sleep</strong>(long time)</td>
+<td align="center">让当前执行的线程休眠多少毫秒后，再继续执行</td>
+</tr>
+<tr>
+<td align="center">public final void <strong>join</strong>() throws InterruptedException</td>
+<td align="center">让调用当前这个方法的线程先执行完(插队)</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">Thread提供的常见构造器</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public <strong>Thread</strong>(String name)</td>
+<td align="center">可以为当前线程指定名称</td>
+</tr>
+<tr>
+<td align="center">public <strong>Thread</strong>(Runnable target)</td>
+<td align="center">封装Runnable对象成为线程对象</td>
+</tr>
+<tr>
+<td align="center">public <strong>Thread</strong>(Runnable target, String name)</td>
+<td align="center">封装Runnable对象成为线程对象，并指定线程名称</td>
+</tr>
+</tbody></table>
+<h3 id="1-3、线程安全"><a href="#1-3、线程安全" class="headerlink" title="1.3、线程安全"></a>1.3、线程安全</h3><p>多个线程，同时操作同一个共享资源的时候，可能会出现业务安全问题</p>
+<p>可用线程同步来解决</p>
+<h3 id="1-4、线程同步"><a href="#1-4、线程同步" class="headerlink" title="1.4、线程同步"></a>1.4、线程同步</h3><p>线程同步是线程安全问题的解决方案</p>
+<p><strong>核心思想</strong>：</p>
+<p>让多个线程先后依次访问共享资源，这样就可以避免出现线程安全问题</p>
+<p><strong>线程同步常见方案</strong>：加锁</p>
+<p><strong>加锁</strong>：每次只允许一个线程加锁，加锁后才能进入访问，访问完毕后自动解锁，然后其他线程才能再加锁进来</p>
+<ul>
+<li><strong>加锁方案一</strong>：同步代码块</li>
+</ul>
+<p><strong>作用</strong>：把访问共享资源的核心代码给上锁，以此保证线程安全</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">synchronized(同步锁对象，要求对象唯一)&#123;</span><br><span class="line">	访问共享资源的核心代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>原理</strong>：每次只允许一个线程加锁后进入，执行完毕后自动解锁，其他线程才可以进来执行</p>
+<p><strong>同步锁注意事项</strong>：</p>
+<ol>
+<li>对于当前同时执行的线程来说，同步锁必须是同一把（同一个对象），否则会出bug</li>
+<li>锁对象随便选一个唯一对象可能会影响其他无关线程的执行，例如使用字面量当锁，所有线程全部受影响</li>
+</ol>
+<p><strong>锁对象使用规范</strong>：</p>
+<ol>
+<li>建议使用共享资源作为锁对象</li>
+<li>对于实例方法建议使用this作为锁对象</li>
+<li>对于静态方法建议使用字节码（类名.class）对象作为锁对象</li>
+</ol>
+<ul>
+<li><strong>加锁方案二</strong>：同步方法</li>
+</ul>
+<p><strong>作用</strong>：把访问共享资源的核心方法给上锁，以此保证线程安全</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">修饰符 synchronized 返回值类型 方法名称 (形参列表)&#123;</span><br><span class="line">	操作共享资源的代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>原理</strong>：每次只能一个线程进入，执行完毕以后自动解锁，其他线程才可以进来执行</p>
+<p>同步方法底层原理：</p>
+<ol>
+<li>同步方法底层也有隐式锁对象，只是锁的范围是整个方法代码</li>
+<li>如果方法是实例方法：同步方法默认用this作为锁对象</li>
+<li>如果方法是静态方法：同步方法默认用类名.class作为锁对象</li>
+</ol>
+<ul>
+<li><strong>加锁方案三</strong>：Lock锁</li>
+</ul>
+<p>Lock是接口，不能直接实例化，可以采用它的实现类ReentrantLock来构建Lock锁对象</p>
+<table>
+<thead>
+<tr>
+<th align="center">构造器</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public <strong>ReentrantLock</strong>()</td>
+<td align="center">获得Lock锁的实现类对象</td>
+</tr>
+</tbody></table>
+<p><strong>Lock的常用方法</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">方法名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">void <strong>lock</strong>()</td>
+<td align="center">获得锁</td>
+</tr>
+<tr>
+<td align="center">void <strong>unlock</strong>()</td>
+<td align="center">释放锁</td>
+</tr>
+</tbody></table>
+<p><strong>注意事项</strong>：</p>
+<ol>
+<li>建议使用final修饰锁对象，防止被别人篡改</li>
+<li>建议将释放锁的操作放到finally代码块中，确保锁用完一定会被释放</li>
+</ol>
+<h3 id="1-5、线程池"><a href="#1-5、线程池" class="headerlink" title="1.5、线程池"></a>1.5、线程池</h3><p>线程池就是一个可以复用线程的技术</p>
+<p><strong>不使用线程池的问题</strong>：</p>
+<p>用户每发起一个请求，后台就需要创建一个新线程来处理，下次新任务来了又要创建新线程处理，而创建新线程开销很大，并且请求过多时，会产生大量线程，这样会严重影响系统的性能</p>
+<p><strong>线程池工作原理</strong>：</p>
+<p>​	<strong>组成</strong>：工作线程WorkThread、任务队列WorkQueue（只能放Runnable任务和Callable任务）</p>
+<p>​	<strong>工作机制</strong>：任务去任务队列排队，有限个工作线程去依次处理任务队列的任务</p>
+<p><strong>线程池注意事项</strong>：</p>
+<p>​	<strong>什么时候开始创建临时线程</strong>：新任务提交时发现核心线程都在忙，任务队列也满了，并且还可以创建临时线程，此时才会创建临时线程</p>
+<p>​	<strong>什么时候会拒绝新任务</strong>：核心线程和临时线程都在忙，任务队列也满了，新的任务过来的时候才会开始拒绝任务</p>
+<p><strong>任务拒绝策略</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">策略</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>ThreadPoolExecutor.AbortPolicy</strong>()</td>
+<td align="center">丢弃任务并抛出RejectedExecutionException异常（默认策略）</td>
+</tr>
+<tr>
+<td align="center"><strong>ThreadPoolExecutor.DiscardPolicy</strong>()</td>
+<td align="center">丢弃任务，但是不抛出异常（不推荐这么做）</td>
+</tr>
+<tr>
+<td align="center"><strong>ThreadPoolExecutor.DiscardOldestPolicy</strong>()</td>
+<td align="center">抛弃队列中等待最久的任务，然后把当前任务加入队列中</td>
+</tr>
+<tr>
+<td align="center"><strong>ThreadPoolExecutor.CallerRunsPolicy</strong>()</td>
+<td align="center">由主线程负责调用任务的run（）方法从而绕过线程池直接执行</td>
+</tr>
+</tbody></table>
+<h4 id="1-5-1、创建线程池"><a href="#1-5-1、创建线程池" class="headerlink" title="1.5.1、创建线程池"></a>1.5.1、创建线程池</h4><p>JDK 5.0起提供了代表线程池的接口：ExecutorService</p>
+<p>ExecutorService的常用方法</p>
+<table>
+<thead>
+<tr>
+<th align="center">方法名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">void <strong>execute</strong>(Runnable command)</td>
+<td align="center">执行Runnable任务</td>
+</tr>
+<tr>
+<td align="center">Future<T> <strong>submit</strong>(Callable<T> task)</td>
+<td align="center">执行Callable任务，返回未来任务对象，用于获取线程返回的结果</td>
+</tr>
+<tr>
+<td align="center">void <strong>shutdown</strong>()</td>
+<td align="center">等全部任务执行完毕后，再关闭线程池</td>
+</tr>
+<tr>
+<td align="center">List<Runnable> <strong>shutdownNow</strong>()</td>
+<td align="center">立刻关闭线程池，停止正在执行的任务，并返回队列中未执行的任务</td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>创建线程池对象方式一</strong>：</li>
+</ul>
+<p>使用ExecutorService的实现类ThreadPoolExecutor自创建一个线程池对象</p>
+<table>
+<thead>
+<tr>
+<th align="center">ThreadPoolExecutor类提供的构造器</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public <strong>ThreadPoolExecutor</strong>(七个参数)</td>
+<td align="center">使用指定的初始化参数创建一个新的线程池对象</td>
+</tr>
+</tbody></table>
+<p><strong>ThreadPoolExecutor构造器的七个参数</strong>：</p>
+<ol>
+<li>参数一：int <strong>corePoolSize</strong>：指定线程池的核心线程的数量</li>
+<li>参数二：int <strong>maximumPoolSize</strong>：指定线程池的最大线程数量（最大线程数 - 核心线程数 &#x3D; 可创建的临时线程数）</li>
+<li>参数三：long <strong>keepAliveTime</strong>：指定临时线程的存活时间</li>
+<li>参数四：TimeUnit <strong>unit</strong>：指定临时线程存活的时间单位（秒、分、时、天）</li>
+<li>参数五：BlockingQueue<Runnable> <strong>workQueue</strong>：指定线程池的任务队列</li>
+<li>参数六：ThreadFactory <strong>threadFactory</strong>：指定线程池的线程工厂（创建线程）</li>
+<li>参数七：RejectedExecutionHandler <strong>handler</strong>：指定线程池的任务拒绝策略（线程都在忙，任务队列已满，新任务怎么处理）</li>
+</ol>
+<p>例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args)&#123;</span><br><span class="line">	ExecutorService pool = new ThreadPoolExecutor(3,5,10,TimeUnit.SECONDS,new ArrayBlockingQueue&lt;&gt;(3),Executors.defaultThreadFactory(),new ThreadPoolExecutor.AbortPolicy());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><strong>创建线程池对象方式二</strong>：</li>
+</ul>
+<p>通过Executors创建线程池</p>
+<p>Executors是一个线程池的工具类，提供了很多静态方法用于返回不同特点的线程池对象</p>
+<p><strong>注意</strong>：大型并发系统环境中使用Executors如果不注意可能会出现系统风险</p>
+<table>
+<thead>
+<tr>
+<th align="center">方法名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public static ExecutorService <strong>newFixedThreadPool</strong>(int nThreads)</td>
+<td align="center">创建固定线程数量的线程池，如果某个线程因为执行异常而结束，那么线程池会补充一个新线程替代它</td>
+</tr>
+<tr>
+<td align="center">public static ExecutorService <strong>newSingleThreadExecutor</strong>()</td>
+<td align="center">创建只有一个线程的线程池对象，如果该线程出现异常而结束，那么线程池会补充一个新线程</td>
+</tr>
+<tr>
+<td align="center">public static ExecutorService <strong>newCachedThreadPool</strong>()</td>
+<td align="center">线程数量随着任务增加而增加，如果线程任务执行完毕且空闲了60s则会被回收掉</td>
+</tr>
+<tr>
+<td align="center">public static ScheduledExecutorService <strong>newScheduledThreadPool</strong>(int corePoolSize)</td>
+<td align="center">创建一个线程池，可以实现在给定的延迟后运行任务，或者定期执行任务</td>
+</tr>
+</tbody></table>
+<h4 id="1-5-2、使用线程池处理Runnable任务"><a href="#1-5-2、使用线程池处理Runnable任务" class="headerlink" title="1.5.2、使用线程池处理Runnable任务"></a>1.5.2、使用线程池处理Runnable任务</h4><p>例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">//类MyRunnable</span><br><span class="line">public class MyRunnable implements Runnable&#123;</span><br><span class="line">	@Override</span><br><span class="line">	public void run()&#123;</span><br><span class="line">		//重写run方法体</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//类ExecutorServiceDemo1</span><br><span class="line">public class ExecutorServiceDemo1&#123;</span><br><span class="line">	public static void main(String[] args)&#123;</span><br><span class="line">		ExecutorService pool = new ThreadPoolExecutor(3,5,10,TimeUnit.SECONDS,new ArrayBlockingQueue&lt;&gt;				(3),Executors.defaultThreadFactory(),new ThreadPoolExecutor.AbortPolicy());//创建线程池</span><br><span class="line">		Runnable target = new MyRunnable();</span><br><span class="line">		pool.execute(target);//创建核心线程1完成任务1</span><br><span class="line">		pool.execute(target);//创建核心线程2完成任务2</span><br><span class="line">		pool.execute(target);//创建核心线程3完成任务3</span><br><span class="line">		pool.execute(target);//核心线程满了，进入任务队列等待核心线程空闲复用核心线程完成任务4</span><br><span class="line">		pool.execute(target);//核心线程满了，进入任务队列等待核心线程空闲复用核心线程完成任务5</span><br><span class="line">		pool.execute(target);//核心线程满了，进入任务队列等待核心线程空闲复用核心线程完成任务6</span><br><span class="line">		pool.execute(target);//核心线程满了，任务队列也满了，创建临时线程完成任务7</span><br><span class="line">		pool.execute(target);//核心线程满了，任务队列也满了，创建临时线程完成任务8</span><br><span class="line">		pool.execute(target);//核心线程满了，任务队列也满了，临时线程也满了，丢弃任务</span><br><span class="line">		pool.shutdown();//关闭线程池，一般不关</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="1-5-3、使用线程池处理Callable问题"><a href="#1-5-3、使用线程池处理Callable问题" class="headerlink" title="1.5.3、使用线程池处理Callable问题"></a>1.5.3、使用线程池处理Callable问题</h4><p>例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">//类MyCallable</span><br><span class="line">public class MyCallable implements Callable&lt;String&gt; &#123;</span><br><span class="line">	public String call() throws Exception&#123;</span><br><span class="line">		//实现call方法，定义线程执行体</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//类ExecutorServiceDemo2</span><br><span class="line">public class ExecutorServiceDemo2&#123;</span><br><span class="line">	public static void main(String[] args)&#123;</span><br><span class="line">		public static void main(String[] args)&#123;</span><br><span class="line">		ExecutorService pool = new ThreadPoolExecutor(3,5,10,TimeUnit.SECONDS,new ArrayBlockingQueue&lt;&gt;				(3),Executors.defaultThreadFactory(),new ThreadPoolExecutor.AbortPolicy());//创建线程池</span><br><span class="line">		Future&lt;String&gt; f1 = pool.submit(new MyCallable());</span><br><span class="line">		Future&lt;String&gt; f2 = pool.submit(new MyCallable());</span><br><span class="line">		Future&lt;String&gt; f3 = pool.submit(new MyCallable());</span><br><span class="line">		Future&lt;String&gt; f4 = pool.submit(new MyCallable());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-6、并发-并行"><a href="#1-6、并发-并行" class="headerlink" title="1.6、并发&#x2F;并行"></a>1.6、并发&#x2F;并行</h3><p><strong>进程</strong>：正在运行的程序（软件）就是一个独立的进程</p>
+<p>线程是属于进程的，一个进程中可以同时运行很多个线程</p>
+<p>进程中的多个线程其实是并发和并行执行的</p>
+<p><strong>并发的含义</strong>：</p>
+<p>进程中的线程是由CPU负责调度执行的，但CPU能同时处理线程的数量有限，为了保证全部线程都能往前执行，CPU会轮询为系统的每个线程服务，由于CPU切换的速度很快，给我们的感觉这些线程在同时执行，这就是并发</p>
+<p><strong>并行的含义</strong>：</p>
+<p>在同一个时刻上，同时有多个线程在被CPU调度执行</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">不夜</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2026/04/21/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E4%B9%9D%E9%83%A8%E5%88%86/">http://example.com/2026/04/21/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E4%B9%9D%E9%83%A8%E5%88%86/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">不夜</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related  no-desc" href="/2026/04/27/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E5%8D%81%E9%83%A8%E5%88%86/" title="java基础第十部分"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">java基础第十部分</div></div></div></a><a class="pagination-related" href="/2026/04/21/%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8DTypora%E5%85%89%E6%A0%87%E8%A2%AB%E9%A6%96%E9%83%A8%E5%8A%AB%E6%8C%81%E5%AF%BC%E8%87%B4%E6%AD%A3%E6%96%87%E6%89%93%E4%B8%8D%E5%87%BA%E5%AD%97/" title="如何避免Typora光标被首部劫持导致正文打不出字"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">如何避免Typora光标被首部劫持导致正文打不出字</div></div><div class="info-2"><div class="info-item-1">创建.md文件后，在首部标签栏下方打一个空格用以分隔标签栏和正文，然后另起一行写正文 </div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">不夜</div><div class="author-info-description">study</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/NIKONIKOKO" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:1029173431@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81java%E5%8A%A0%E5%BC%BA"><span class="toc-number">1.</span> <span class="toc-text">一、java加强</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-number">1.1.</span> <span class="toc-text">1、多线程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E3%80%81%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1、创建线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2%E3%80%81Thread%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2、Thread常用方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3%E3%80%81%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3、线程安全</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4%E3%80%81%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5"><span class="toc-number">1.1.4.</span> <span class="toc-text">1.4、线程同步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5%E3%80%81%E7%BA%BF%E7%A8%8B%E6%B1%A0"><span class="toc-number">1.1.5.</span> <span class="toc-text">1.5、线程池</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-1%E3%80%81%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B%E6%B1%A0"><span class="toc-number">1.1.5.1.</span> <span class="toc-text">1.5.1、创建线程池</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-2%E3%80%81%E4%BD%BF%E7%94%A8%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%A4%84%E7%90%86Runnable%E4%BB%BB%E5%8A%A1"><span class="toc-number">1.1.5.2.</span> <span class="toc-text">1.5.2、使用线程池处理Runnable任务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-3%E3%80%81%E4%BD%BF%E7%94%A8%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%A4%84%E7%90%86Callable%E9%97%AE%E9%A2%98"><span class="toc-number">1.1.5.3.</span> <span class="toc-text">1.5.3、使用线程池处理Callable问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6%E3%80%81%E5%B9%B6%E5%8F%91-%E5%B9%B6%E8%A1%8C"><span class="toc-number">1.1.6.</span> <span class="toc-text">1.6、并发&#x2F;并行</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/27/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E5%8D%81%E9%83%A8%E5%88%86/" title="java基础第十部分">java基础第十部分</a><time datetime="2026-04-27T09:06:10.000Z" title="发表于 2026-04-27 17:06:10">2026-04-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/21/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E4%B9%9D%E9%83%A8%E5%88%86/" title="java基础第九部分">java基础第九部分</a><time datetime="2026-04-21T09:38:30.000Z" title="发表于 2026-04-21 17:38:30">2026-04-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/21/%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8DTypora%E5%85%89%E6%A0%87%E8%A2%AB%E9%A6%96%E9%83%A8%E5%8A%AB%E6%8C%81%E5%AF%BC%E8%87%B4%E6%AD%A3%E6%96%87%E6%89%93%E4%B8%8D%E5%87%BA%E5%AD%97/" title="如何避免Typora光标被首部劫持导致正文打不出字">如何避免Typora光标被首部劫持导致正文打不出字</a><time datetime="2026-04-21T09:37:51.000Z" title="发表于 2026-04-21 17:37:51">2026-04-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/19/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E5%85%AB%E9%83%A8%E5%88%86/" title="java基础第八部分">java基础第八部分</a><time datetime="2026-04-19T07:25:13.605Z" title="发表于 2026-04-19 15:25:13">2026-04-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/21/java_base/java%E5%9F%BA%E7%A1%80%E7%AC%AC%E4%B8%83%E9%83%A8%E5%88%86/" title="java基础第七部分">java基础第七部分</a><time datetime="2026-03-21T07:50:09.788Z" title="发表于 2026-03-21 15:50:09">2026-03-21</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By 不夜</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章标题或内容..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>
